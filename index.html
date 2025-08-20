@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal website of Imran Shiundu - Website Developer, Startup Developer, Software Developer">
+    <meta name="keywords" content="Imran Shiundu, web developer, software developer, portfolio">
+    <meta name="author" content="Imran Shiundu">
+    <meta property="og:title" content="Becoming Imran - Web & Software Developer">
+    <meta property="og:description" content="Website Developer | Startup Developer | Software Developer">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@imranshiundu">
+    <title>Becoming Imran - Web & Software Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="aboutme.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+   <!-- Header Section -->
+<header>
+    <div class="container header-container">
+        <div class="logo">BecomingImran</div>
+        
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="header-actions">
+            <a href="#contact" class="hire-me-btn">Hire Me</a>
+            <button class="theme-toggle" aria-label="Toggle dark/light mode">
+                <span class="theme-icon">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun" style="display: none;"></i>
+                </span>
+            </button>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="qr-code">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://becomingimran.netlify.app" alt="QR Code to BecomingImran">
+            <p>Scan to save my contact</p>
+        </div>
+    </div>
+</header>
+
+
+
+<script>
+    // Mobile menu functionality
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const body = document.body;
+    
+    mobileMenuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        body.style.overflow = body.style.overflow === 'hidden' ? '' : 'hidden';
+        
+        // Animate hamburger to X
+        const spans = this.querySelectorAll('span');
+        if (mobileMenu.classList.contains('active')) {
+            spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+            spans[1].style.opacity = '0';
+            spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+        } else {
+            spans[0].style.transform = '';
+            spans[1].style.opacity = '';
+            spans[2].style.transform = '';
+        }
+    });
+    
+    // Close mobile menu when clicking on a link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            body.style.overflow = '';
+            
+            // Reset hamburger animation
+            const spans = mobileMenuToggle.querySelectorAll('span');
+            spans[0].style.transform = '';
+            spans[1].style.opacity = '';
+            spans[2].style.transform = '';
+        });
+    });
+    
+    // Update active nav link on scroll
+    window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        let currentSection = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            
+            if (pageYOffset >= (sectionTop - 100)) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').substring(1) === currentSection) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+
+    <main>
+      <!-- About Me Section -->
+<section id="about" class="about">
+    <div class="container about-content">
+        <h2 class="section-title">About Me</h2>
+        
+        <div class="about-grid">
+            <div class="about-text">
+                <p class="intro-text">Hello, I'm Imran Shiundu. I'm passionate about creating digital solutions that make a difference.</p>
+                
+                <div class="roles-animation">
+                    <span class="role active">Website Developer</span>
+                    <span class="role">Startup Developer</span>
+                    <span class="role">Software Developer</span>
+                </div>
+                
+                <p class="description">With a focus on clean code and user experience, I build solutions that bridge the gap between ideas and reality. My approach combines technical expertise with creative problem-solving to deliver impactful digital products.</p>
+            </div>
+            
+            <div class="skills-section">
+                <h3 class="skills-title">Technical Skills</h3>
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <span class="skill-name">HTML</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="95%"></div>
+                        </div>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">CSS</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="90%"></div>
+                        </div>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="88%"></div>
+                        </div>
+                        <span class="skill-percent">88%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">PHP</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="85%"></div>
+                        </div>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Java</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="82%"></div>
+                        </div>
+                        <span class="skill-percent">82%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    // Animate skill bars when section is in view
+    function animateSkills() {
+        const skillProgresses = document.querySelectorAll('.skill-progress');
+        skillProgresses.forEach(progress => {
+            const level = progress.getAttribute('data-level');
+            progress.style.width = level;
+        });
+    }
+    
+    // Check if about section is in view and animate
+    function checkAboutInView() {
+        const aboutSection = document.getElementById('about');
+        const rect = aboutSection.getBoundingClientRect();
+        const isInView = (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
+            rect.bottom >= 0
+        );
+        
+        if (isInView && !aboutSection.classList.contains('animated')) {
+            aboutSection.classList.add('animated');
+            animateSkills();
+        }
+    }
+    
+    // Initial check and add scroll listener
+    window.addEventListener('scroll', checkAboutInView);
+    window.addEventListener('load', checkAboutInView);
+</script>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://placehold.co/600x400/000000/FFFFFF/png?text=Project+1" alt="Project 1">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">E-Commerce Platform</h3>
+                            <p class="project-description">A full-featured online shopping platform with payment integration and inventory management.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                            <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://placehold.co/600x400/000000/FFFFFF/png?text=Project+2" alt="Project 2">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Task Management App</h3>
+                            <p class="project-description">A productivity application for teams to collaborate and manage projects efficiently.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                            </div>
+                            <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://placehold.co/600x400/000000/FFFFFF/png?text=Project+3" alt="Project 3">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Health & Fitness Tracker</h3>
+                            <p class="project-description">A comprehensive health monitoring application with workout plans and nutrition tracking.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">GraphQL</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                            <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Portfolio & Socials Section -->
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <h2 class="section-title">Portfolio & Socials</h2>
+        
+        <div class="portfolio-content">
+            <div class="portfolio-intro">
+                <p>Explore my work and connect with me through various platforms. I'm always open to discussing new projects and opportunities.</p>
+                <a href="#" class="portfolio-button">
+                    <span>View Full Portfolio</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="socials-section">
+                <h3 class="socials-title">Connect With Me</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span class="social-name"></span>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                        <span class="social-name"></span>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="X">
+                        <i class="fab fa-x-twitter"></i>
+                        <span class="social-name">Twitter</span>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span class="social-name"></span>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Threads">
+                        <i class="fab fa-threads"></i>
+                        <span class="social-name">Threads</span>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span class="social-name"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">Let's Connect</h2>
+        
+        <div class="contact-content">
+            <div class="contact-info">
+                <p>Feel free to reach out for collaborations or just a friendly hello. I'm currently available for freelance work and open to new opportunities.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Nairobi, Kenya</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>hello@becomingimran.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+254 7XX XXX XXX</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-actions">
+                <h3>Get in touch</h3>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/yournumber" class="contact-button" aria-label="Chat on WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp Chat</span>
+                    </a>
+                    <a href="mailto:your@email.com" class="contact-button" aria-label="Send an email">
+                        <i class="far fa-envelope"></i>
+                        <span>Send Email</span>
+                    </a>
+                    <a href="#hire" class="contact-button" aria-label="Hire Me">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Hire Me</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Portfolio Section Styles */
+    .portfolio {
+        padding: 5rem 0;
+        background-color: var(--card-bg);
+    }
+    
+    .portfolio-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: start;
+    }
+    
+    .portfolio-intro p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+    }
+    
+    .portfolio-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.8rem 1.8rem;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        border: 2px solid var(--accent-color);
+        text-decoration: none;
+        font-weight: 600;
+        transition: all var(--transition-speed);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .portfolio-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--accent-color);
+        transition: left var(--transition-speed);
+        z-index: -1;
+    }
+    
+    .portfolio-button:hover {
+        color: var(--bg-color);
+    }
+    
+    .portfolio-button:hover::before {
+        left: 0;
+    }
+    
+    .socials-section {
+        background: var(--bg-color);
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    [data-theme="dark"] .socials-section {
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
+    }
+    
+    .socials-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        position: relative;
+        padding-bottom: 0.5rem;
+    }
+    
+    .socials-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 3px;
+        background-color: var(--accent-color);
+    }
+    
+    .social-icons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .social-icon {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        padding: 0.8rem;
+        text-decoration: none;
+        color: var(--text-color);
+        border: 1px solid transparent;
+        border-radius: 8px;
+        transition: all var(--transition-speed);
+    }
+    
+    .social-icon:hover {
+        border-color: var(--accent-color);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    [data-theme="dark"] .social-icon:hover {
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+    }
+    
+    .social-icon i {
+        font-size: 1.2rem;
+        width: 24px;
+        text-align: center;
+    }
+    
+    .social-name {
+        font-weight: 500;
+    }
+    
+    /* Contact Section Styles */
+    .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        margin-top: 2rem;
+    }
+    
+    .contact-info p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+    }
+    
+    .contact-details {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .contact-item i {
+        width: 20px;
+        color: var(--accent-color);
+    }
+    
+    .contact-actions {
+        background: var(--card-bg);
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    [data-theme="dark"] .contact-actions {
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
+    }
+    
+    .contact-actions h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    
+    .contact-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .contact-button {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 1.5rem;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        border: 2px solid var(--accent-color);
+        text-decoration: none;
+        font-weight: 600;
+        transition: all var(--transition-speed);
+        border-radius: 8px;
+    }
+    
+    .contact-button:hover {
+        background-color: var(--accent-color);
+        color: var(--bg-color);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    [data-theme="dark"] .contact-button:hover {
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 968px) {
+        .portfolio-content,
+        .contact-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        .social-icons {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .social-icons {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .contact-buttons {
+            flex-direction: column;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .social-icons {
+            grid-template-columns: 1fr;
+        }
+        
+        .contact-button {
+            padding: 0.8rem 1rem;
+        }
+        
+        .socials-section,
+        .contact-actions {
+            padding: 1.5rem;
+        }
+    }
+</style>
+
+        <!-- Hire Me Section -->
+        <section id="hire" class="hire-me">
+            <div class="container">
+                <h2 class="section-title">Ready to Work Together?</h2>
+                <p>Let's turn your ideas into reality with clean, efficient code and innovative solutions.</p>
+                <button class="hire-button" onclick="location.href='#contact'">Hire Me</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="copyright">© 2025 Becoming Imran</div>
+            <p class="quote">"Innovation doesn't wait for permission — it builds its own path."</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
