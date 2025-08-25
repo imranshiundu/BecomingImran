@@ -1,0 +1,295 @@
+  .socials-section {
+        background: var(--bg-color);
+        padding: 2.5rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        margin-top: 2rem;
+    }
+    
+    [data-theme="dark"] .socials-section {
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.08);
+    }
+    
+    .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .socials-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 0.8rem;
+        color: var(--text-color);
+        position: relative;
+        display: inline-block;
+    }
+    
+    .socials-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 3px;
+        background: var(--accent-color);
+        border-radius: 2px;
+    }
+    
+    .socials-subtitle {
+        color: var(--text-color);
+        opacity: 0.8;
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+        line-height: 1.6;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .social-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .social-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+    
+    .social-card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        background: var(--card-bg);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 16px;
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    [data-theme="dark"] .social-card {
+        border-color: rgba(255, 255, 255, 0.08);
+    }
+    
+    .social-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05), transparent);
+        transition: left 0.6s ease;
+    }
+    
+    .social-card:hover::before {
+        left: 100%;
+    }
+    
+    .social-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        border-color: var(--accent-color);
+    }
+    
+    [data-theme="dark"] .social-card:hover {
+        box-shadow: 0 15px 35px rgba(255, 255, 255, 0.1);
+    }
+    
+    .social-card-inner {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+    }
+    
+    .social-icon-wrapper {
+        width: 60px;
+        height: 60px;
+        border-radius: 14px;
+        background: var(--accent-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--bg-color);
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+        flex-shrink: 0;
+    }
+    
+    .social-card:hover .social-icon-wrapper {
+        transform: scale(1.1) rotate(5deg);
+    }
+    
+    .social-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    
+    .social-name {
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: var(--text-color);
+    }
+    
+    .social-handle {
+        font-size: 0.95rem;
+        opacity: 0.8;
+        color: var(--text-color);
+    }
+    
+    .social-arrow {
+        opacity: 0;
+        transform: translateX(-10px);
+        transition: all 0.3s ease;
+        color: var(--accent-color);
+    }
+    
+    .social-card:hover .social-arrow {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    /* Platform-specific colors on hover */
+    .social-card[aria-label="LinkedIn"]:hover {
+        border-color: #0077B5;
+    }
+    
+    .social-card[aria-label="GitHub"]:hover {
+        border-color: #333;
+    }
+    
+    .social-card[aria-label="Twitter"]:hover {
+        border-color: #000;
+    }
+    
+    .social-card[aria-label="Instagram"]:hover {
+        border-color: #E4405F;
+    }
+    
+    .social-card[aria-label="Threads"]:hover {
+        border-color: #000;
+    }
+    
+    .social-card[aria-label="Facebook"]:hover {
+        border-color: #1877F2;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .social-row {
+            gap: 1.2rem;
+        }
+        
+        .social-card {
+            padding: 1.2rem;
+        }
+        
+        .social-icon-wrapper {
+            width: 50px;
+            height: 50px;
+            font-size: 1.3rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .socials-section {
+            padding: 2rem;
+        }
+        
+        .socials-title {
+            font-size: 1.7rem;
+        }
+        
+        .socials-subtitle {
+            font-size: 1rem;
+        }
+        
+        .social-row {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        
+        .social-card-inner {
+            gap: 1rem;
+        }
+        
+        .social-icon-wrapper {
+            width: 45px;
+            height: 45px;
+            font-size: 1.2rem;
+        }
+        
+        .social-name {
+            font-size: 1.1rem;
+        }
+        
+        .social-handle {
+            font-size: 0.9rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .socials-section {
+            padding: 1.5rem;
+            border-radius: 16px;
+        }
+        
+        .section-header {
+            margin-bottom: 2rem;
+        }
+        
+        .socials-title {
+            font-size: 1.5rem;
+        }
+        
+        .social-card {
+            padding: 1rem;
+            border-radius: 12px;
+        }
+        
+        .social-card-inner {
+            gap: 0.8rem;
+        }
+        
+        .social-icon-wrapper {
+            width: 40px;
+            height: 40px;
+            font-size: 1.1rem;
+            border-radius: 10px;
+        }
+        
+        .social-name {
+            font-size: 1rem;
+        }
+        
+        .social-handle {
+            font-size: 0.85rem;
+        }
+        
+        .social-arrow {
+            font-size: 0.9rem;
+        }
+    }
+    
+    @media (max-width: 360px) {
+        .socials-section {
+            padding: 1.2rem;
+        }
+        
+        .social-card {
+            padding: 0.8rem;
+        }
+        
+        .social-icon-wrapper {
+            width: 35px;
+            height: 35px;
+            font-size: 1rem;
+        }
+    }
