@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Imran Shiundu — Portfolio & Services</title>
+  <meta name="description" content="Imran Shiundu — Website Developer, Startup Developer, and Software Engineer. Hire me for your next project." />
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <div class="page">
+    <header class="nav">
+      <div class="brand">
+        <svg class="mark" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 4v16h3V10l9 10h4V4h-3v10L8 4H4z" fill="currentColor"/>
+          <path d="M21 5h-3V2l3 3z" fill="currentColor"/>
+        </svg>
+        <span class="brand-name">BECOMING&nbsp;IMRAN</span>
+      </div>
+      
+      <div class="nav-menu">
+        <div class="nav-item active" data-scroll="top">Home</div>
+        <div class="nav-item" data-scroll="skills">Skills</div>
+        <div class="nav-item" data-scroll="projects">Projects</div>
+        <div class="nav-item" data-scroll="stats">Experience</div>
+        <div class="nav-item" data-scroll="contact">Contact</div>
+      </div>
+      
+      <div class="actions">
+        <button id="installBtn" class="btn subtle" hidden>Install App</button>
+        <button id="themeToggle" class="toggle" aria-label="Toggle dark mode">
+          <span class="icon sun" aria-hidden="true">☀</span>
+          <span class="icon moon" aria-hidden="true">☾</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero reveal" id="top">
+        <div class="hero-card glass">
+          <div class="logo-stack">
+            <div class="logo-circle"><span>IS</span></div>
+          </div>
+          <h1 class="title">Imran Shiundu</h1>
+          <p class="roles">Website Developer · Startup Developer · Software Engineer</p>
+          <p class="quote">"I build websites and apps that help businesses grow. Clean design, smart code, and happy clients."</p>
+          
+          <div class="cta-row">
+            <a class="btn primary" href="#contact">Hire Me Now</a>
+            <a class="btn outline" href="#projects">See My Work</a>
+          </div>
+          
+          <div class="qr">
+            <span class="qr-note">Scan QR code from my business card</span>
+            <div class="qr-box">
+              <!-- Replace this with your actual QR code image -->
+              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik00NSA0NWgxMHYxMEg0NXptMTAgMTBoMTB2MTBINTV6bTEwLTIwaDEwdjEwSDY1em0yMCAyMGgxMHYxMEg4NXptLTEwLTEwaDEwdjEwSDc1em0yMCA0MGgxMHYxMEg5NXptMC0yMGgxMHYxMEg5NXptLTMwIDBoMTB2MTBINjV6bTAgMjBoMTB2MTBINjV6bTIwLTIwaDIwdjIwSDEwNXptMCA0MGgxMHYxMGgtMTB6bTIwLTQwaDEwdjExMGgtMTB6bTAgNjBoMTB2MTBoLTEwem0yMC02MGgxMHYxMGgtMTB6bTAgMjBoMTB2MTBoLTEwem0wIDIwaDEwdjEwaC0xMHptMC0xMGgxMHYxMGgtMTB6bS0xMCAxMGgxMHYxMGgtMTB6bS0yMCA0MGgxMHYxMGgtMTB6bTIwIDBoMTB2MTBoLTEwem0tMTAgMTBoMTB2MTBoLTEweiIgZmlsbD0iIzAwMCIvPjwvc3ZnPg==" alt="QR Code" width="140" height="140">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills - Control Center Style -->
+      <section class="panel reveal" id="skills">
+        <h2>My Skills & Services</h2>
+        <p>I specialize in these technologies and services to help bring your ideas to life:</p>
+        
+        <div class="control-grid">
+          <div class="control-item">
+            <span class="control-icon">💻</span>
+            <span>Web Development</span>
+          </div>
+          <div class="control-item">
+            <span class="control-icon">📱</span>
+            <span>Mobile Apps</span>
+          </div>
+          <div class="control-item">
+            <span class="control-icon">🎨</span>
+            <span>UI/UX Design</span>
+          </div>
+          <div class="control-item">
+            <span class="control-icon">🛒</span>
+            <span>E-commerce</span>
+          </div>
+          <div class="control-item">
+            <span class="control-icon">🔍</span>
+            <span>SEO Optimization</span>
+          </div>
+          <div class="control-item">
+            <span class="control-icon">📊</span>
+            <span>Data Analysis</span>
+          </div>
+        </div>
+        
+        <div class="ios-card">
+          <h3>Technical Skills</h3>
+          <p><strong>Frontend:</strong> HTML, CSS, JavaScript, React</p>
+          <p><strong>Backend:</strong> PHP, Node.js, Python</p>
+          <p><strong>Database:</strong> MySQL, MongoDB</p>
+          <p><strong>Tools:</strong> Git, VS Code, Figma, Adobe XD</p>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="panel reveal" id="projects">
+        <h2>Featured Projects</h2>
+        <p>Here are some of my recent projects that I've built for clients:</p>
+        
+        <div class="project-grid">
+          <div class="project-card">
+            <div class="project-img">E-commerce Website</div>
+            <div class="project-content">
+              <h3 class="project-title">Online Store</h3>
+              <p class="project-desc">A full online shopping website with payment system and admin panel.</p>
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">PHP</span>
+                <span class="project-tag">MySQL</span>
+              </div>
+              <a href="#" class="btn outline">View Project</a>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-img">Business Portfolio</div>
+            <div class="project-content">
+              <h3 class="project-title">Company Website</h3>
+              <p class="project-desc">A modern website for a business to showcase their services and products.</p>
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">JavaScript</span>
+              </div>
+              <a href="#" class="btn outline">View Project</a>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-img">Mobile App</div>
+            <div class="project-content">
+              <h3 class="project-title">Task Manager App</h3>
+              <p class="project-desc">An application to help users organize their daily tasks and reminders.</p>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">CSS</span>
+              </div>
+              <a href="#" class="btn outline">View Project</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="panel reveal" id="stats">
+        <h2>My Experience</h2>
+        <p>Numbers that show my experience and what I can deliver:</p>
+        
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-value">50+</div>
+            <div class="stat-label">Projects Done</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">3+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">40+</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">100%</div>
+            <div class="stat-label">Satisfaction</div>
+          </div>
+        </div>
+        
+        <div class="ios-card">
+          <h3>My Approach</h3>
+          <p>I focus on understanding what my clients need and delivering solutions that work for their business. I believe in clean code, good design, and making websites that are easy to use.</p>
+          <p>I work closely with clients to make sure they are happy with the final product.</p>
+        </div>
+      </section>
+
+      <!-- Links Section -->
+      <section class="panel reveal" id="links">
+        <h2>My Online Profiles</h2>
+        <p>Connect with me on these platforms:</p>
+        
+        <div class="link-grid">
+          <a class="link-tile" href="https://example.com" target="_blank" rel="noopener">
+            <span class="icon">🌐</span><span>Portfolio Website</span>
+          </a>
+          <a class="link-tile" href="https://linkedin.com/in/your-handle" target="_blank" rel="noopener">
+            <span class="icon">💼</span><span>LinkedIn</span>
+          </a>
+          <a class="link-tile" href="https://github.com/your-handle" target="_blank" rel="noopener">
+            <span class="icon">🐱</span><span>GitHub</span>
+          </a>
+          <a class="link-tile" href="https://x.com/your-handle" target="_blank" rel="noopener">
+            <span class="icon">🐦</span><span>X (Twitter)</span>
+          </a>
+          <a class="link-tile" href="https://instagram.com/your-handle" target="_blank" rel="noopener">
+            <span class="icon">📷</span><span>Instagram</span>
+          </a>
+          <a class="link-tile" href="https://dribbble.com/your-handle" target="_blank" rel="noopener">
+            <span class="icon">🎨</span><span>Dribbble</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="panel reveal" id="contact">
+        <h2>Let's Work Together</h2>
+        <p>Reach out to discuss your project or idea:</p>
+        
+        <div class="contact-grid">
+          <a class="btn wide" href="https://wa.me/254740293859?text=Hi%20Imran%2C%20I%27d%20like%20to%20hire%20you" target="_blank" rel="noopener">
+            WhatsApp (+254 740 293 859)
+          </a>
+          <a class="btn wide" href="https://wa.me/254706858992?text=Hi%20Imran%2C%20I%27d%20like%20to%20hire%20you" target="_blank" rel="noopener">
+            WhatsApp (+254 706 858 992)
+          </a>
+          <a class="btn wide outline" href="mailto:imranshiundu@gmail.com?subject=Project%20Inquiry%20from%20Your%20Website">
+            Send Me an Email
+          </a>
+        </div>
+        
+        <div class="ios-card">
+          <h3>What happens next?</h3>
+          <ol>
+            <li>You contact me with your project details</li>
+            <li>We discuss your needs and timeline</li>
+            <li>I prepare a proposal and quote</li>
+            <li>We start working on your project</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© 2025 Imran Shiundu. All rights reserved.</span>
+      <a href="#top" class="top-link">Back to top ↑</a>
+    </footer>
+  </div>
+
+  <!-- Floating Action Button -->
+  <a href="#contact" class="fab">💬</a>
+
+
+  <script src="app.js"></script>
+  <script src="service-worker.js"></script>
+</body>
+</html>
