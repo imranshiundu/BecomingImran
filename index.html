@@ -1,1263 +1,743 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal website of Imran Shiundu - Website Developer, Startup Developer, Software Developer">
-    <meta name="keywords" content="Imran Shiundu, web developer, software developer, portfolio">
-    <meta name="author" content="Imran Shiundu">
-    <meta property="og:title" content="Becoming Imran - Web & Software Developer">
-    <meta property="og:description" content="Website Developer | Startup Developer | Software Developer">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="@imranshiundu">
-    <title>Becoming Imran - Web & Software Developer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="aboutme.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="social.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Imran Shiundu — Portfolio & Services</title>
+  <meta name="description" content="Imran Shiundu — Website Developer, Startup Developer, and Software Engineer. Hire me for your next project." />
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header Section -->
-<header>
-    <div class="container header-container">
-        <div class="logo" data-text="BecomingImran">BecomingImran</div>
-        
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-        
-        <div class="header-actions">
-            <a href="#contact" class="hire-me-btn">Hire Me</a>
-            <button class="theme-toggle" aria-label="Toggle dark/light mode">
-                <span class="theme-icon">
-                    <i class="fas fa-moon"></i>
-                    <i class="fas fa-sun"></i>
-                </span>
-            </button>
-            
-            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen">
+    <div class="loading-spinner">
+      <div class="spinner-ring"></div>
+      <div class="brand-mark">
+        <svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 4v16h3V10l9 10h4V4h-3v10L8 4H4z" fill="currentColor"/>
+          <path d="M21 5h-3V2l3 3z" fill="currentColor"/>
+        </svg>
+      </div>
     </div>
-    
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <ul>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-        <div class="qr-code">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://becomingimran.netlify.app" alt="QR Code to BecomingImran">
-            <p>Scan to save my contact</p>
-        </div>
-    </div>
-</header>
+  </div>
 
-<style>
-    /* Header Styles */
-    header {
-        padding: 0.8rem 0;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: var(--bg-color);
-        z-index: 1000;
-        transition: all 0.3s ease;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(10px);
-        background-color: rgba(255, 255, 255, 0.95);
-    }
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-    [data-theme="dark"] header {
-        background-color: rgba(18, 18, 18, 0.95);
-        box-shadow: 0 1px 3px rgba(255, 255, 255, 0.1);
-    }
+  <div class="page">
+    <header class="nav">
+      <div class="brand">
+        <svg class="mark" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 4v16h3V10l9 10h4V4h-3v10L8 4H4z" fill="currentColor"/>
+          <path d="M21 5h-3V2l3 3z" fill="currentColor"/>
+        </svg>
+        <span class="brand-name">BECOMING&nbsp;IMRAN</span>
+      </div>
+      
+      <div class="nav-menu">
+        <div class="nav-item active" data-scroll="top">Home</div>
+        <div class="nav-item" data-scroll="skills">Skills</div>
+        <div class="nav-item" data-scroll="projects">Projects</div>
+        <div class="nav-item" data-scroll="testimonials">Testimonials</div>
+        <div class="nav-item" data-scroll="stats">Experience</div>
+        <div class="nav-item" data-scroll="contact">Contact</div>
+      </div>
+      
+      <div class="actions">
+        <button id="installBtn" class="btn subtle" hidden>Install App</button>
+        <button id="themeToggle" class="toggle" aria-label="Toggle dark mode">
+          <span class="icon sun" aria-hidden="true">☀</span>
+          <span class="icon moon" aria-hidden="true">☾</span>
+        </button>
+      </div>
+    </header>
 
-    .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-    }
-
-    /* Unique thin font logo with animation */
-    .logo {
-        font-family: 'Inter', sans-serif;
-        font-weight: 200;
-        font-size: 1.6rem;
-        letter-spacing: 2px;
-        position: relative;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        z-index: 1001;
-    }
-    
-    .logo::before {
-        content: attr(data-text);
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        overflow: hidden;
-        white-space: nowrap;
-        color: var(--accent-color);
-        transition: width 0.5s ease;
-    }
-    
-    .logo:hover::before {
-        width: 100%;
-    }
-
-    /* Navigation */
-    .nav-menu ul {
-        display: flex;
-        list-style: none;
-        gap: 1.8rem;
-        margin: 0;
-        padding: 0;
-    }
-
-    .nav-link {
-        text-decoration: none;
-        color: var(--text-color);
-        font-weight: 400;
-        font-size: 0.95rem;
-        position: relative;
-        padding: 0.3rem 0;
-        transition: color 0.3s ease;
-    }
-
-    .nav-link::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 1px;
-        background-color: var(--accent-color);
-        transition: width 0.3s ease;
-    }
-
-    .nav-link:hover::after,
-    .nav-link.active::after {
-        width: 100%;
-    }
-
-    /* Header Actions */
-    .header-actions {
-        display: flex;
-        align-items: center;
-        gap: 1.2rem;
-    }
-
-    .hire-me-btn {
-        padding: 0.5rem 1.2rem;
-        background-color: var(--accent-color);
-        color: var(--bg-color);
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 0.9rem;
-        border-radius: 3px;
-        transition: all 0.3s ease;
-    }
-
-    .hire-me-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    }
-
-    [data-theme="dark"] .hire-me-btn:hover {
-        box-shadow: 0 2px 5px rgba(255, 255, 255, 0.15);
-    }
-
-    /* Theme Toggle */
-    .theme-toggle {
-        background: none;
-        border: none;
-        cursor: pointer;
-        width: 36px;
-        height: 36px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        transition: background-color 0.3s ease;
-        position: relative;
-    }
-
-    .theme-toggle:hover {
-        background-color: rgba(0, 0, 0, 0.05);
-    }
-
-    [data-theme="dark"] .theme-toggle:hover {
-        background-color: rgba(255, 255, 255, 0.05);
-    }
-
-    .theme-icon {
-        font-size: 1rem;
-        position: relative;
-        width: 18px;
-        height: 18px;
-    }
-
-    .theme-icon .fa-sun {
-        display: none;
-    }
-
-    [data-theme="dark"] .theme-icon .fa-moon {
-        display: none;
-    }
-
-    [data-theme="dark"] .theme-icon .fa-sun {
-        display: block;
-    }
-
-    /* Mobile Menu Toggle */
-    .mobile-menu-toggle {
-        display: none;
-        flex-direction: column;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0.4rem;
-        width: 28px;
-        height: 28px;
-        justify-content: space-between;
-    }
-
-    .mobile-menu-toggle span {
-        width: 100%;
-        height: 1.5px;
-        background-color: var(--text-color);
-        transition: all 0.3s ease;
-        transform-origin: center;
-    }
-
-    /* Mobile Menu */
-    .mobile-menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: var(--bg-color);
-        z-index: 998;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.4s ease;
-        transform: translateY(-20px);
-    }
-
-    .mobile-menu.active {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-    }
-
-    .mobile-menu ul {
-        list-style: none;
-        text-align: center;
-        margin-bottom: 2.5rem;
-    }
-
-    .mobile-menu li {
-        margin: 1.8rem 0;
-    }
-
-    .mobile-menu .nav-link {
-        font-size: 1.4rem;
-        font-weight: 400;
-    }
-
-    .qr-code {
-        text-align: center;
-        margin-top: 2.5rem;
-    }
-
-    .qr-code img {
-        width: 130px;
-        height: 130px;
-        border: 1px solid var(--text-color);
-        padding: 0.5rem;
-        background: white;
-    }
-
-    .qr-code p {
-        margin-top: 0.8rem;
-        font-size: 0.85rem;
-        opacity: 0.8;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 968px) {
-        .nav-menu {
-            display: none;
-        }
-
-        .mobile-menu-toggle {
-            display: flex;
-        }
-        
-        .hire-me-btn {
-            display: none;
-        }
-        
-        .logo {
-            font-size: 1.4rem;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .header-actions {
-            gap: 1rem;
-        }
-        
-        .logo {
-            font-size: 1.3rem;
-            letter-spacing: 1px;
-        }
-    }
-
-    /* Add padding to body to prevent content from being hidden behind fixed header */
-    body {
-        padding-top: 60px;
-    }
-</style>
-
-<script>
-    // Mobile menu functionality
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const body = document.body;
-    
-    mobileMenuToggle.addEventListener('click', function() {
-        mobileMenu.classList.toggle('active');
-        body.style.overflow = body.style.overflow === 'hidden' ? '' : 'hidden';
-        
-        // Animate hamburger to X
-        const spans = this.querySelectorAll('span');
-        if (mobileMenu.classList.contains('active')) {
-            spans[0].style.transform = 'rotate(45deg) translate(4px, 4px)';
-            spans[1].style.opacity = '0';
-            spans[2].style.transform = 'rotate(-45deg) translate(6px, -5px)';
-        } else {
-            spans[0].style.transform = '';
-            spans[1].style.opacity = '';
-            spans[2].style.transform = '';
-        }
-    });
-    
-    // Close mobile menu when clicking on a link
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            mobileMenu.classList.remove('active');
-            body.style.overflow = '';
-            
-            // Reset hamburger animation
-            const spans = mobileMenuToggle.querySelectorAll('span');
-            spans[0].style.transform = '';
-            spans[1].style.opacity = '';
-            spans[2].style.transform = '';
-        });
-    });
-    
-    // Update active nav link on scroll
-    window.addEventListener('scroll', function() {
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        let currentSection = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            
-            if (pageYOffset >= (sectionTop - 100)) {
-                currentSection = section.getAttribute('id');
-            }
-        });
-        
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').substring(1) === currentSection) {
-                link.classList.add('active');
-            }
-        });
-    });
-</script>
     <main>
-      <!-- About Me Section -->
-<section id="about" class="about">
-    <div class="container about-content">
-        <h2 class="section-title">About Me</h2>
-        
-        <div class="about-grid">
-            <div class="about-text">
-                <p class="intro-text">Hello, I'm Imran Shiundu. I'm passionate about creating digital solutions that make a difference.</p>
-                
-                <div class="roles-animation">
-                    <span class="role active">Website Developer</span>
-                    <span class="role">Startup Developer</span>
-                    <span class="role">Software Developer</span>
-                </div>
-                
-                <p class="description">With a focus on clean code and user experience, I build solutions that bridge the gap between ideas and reality. My approach combines technical expertise with creative problem-solving to deliver impactful digital products.</p>
+      <!-- Hero Section -->
+      <section class="hero reveal" id="top">
+        <div class="hero-card glass">
+          <div class="logo-stack">
+            <div class="logo-circle"><span>IS</span></div>
+            <div class="decoration-circle"></div>
+            <div class="decoration-circle"></div>
+          </div>
+          <h1 class="title">Imran.S</h1>
+          <p class="roles">Website Developer · Startup Developer · Software Engineer</p>
+          <p class="quote">"I build websites and apps that help businesses grow. Clean design, smart code, and happy clients."</p>
+          
+          <div class="cta-row">
+            <a class="btn primary" href="#contact">Hire Me Now</a>
+            <a class="btn outline" href="#projects">See My Work</a>
+            <a class="btn subtle" href="assets/Imran_Shiundu_CV.pdf" download>Download CV</a>
+          </div>
+          
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="number">50+</span>
+              <span class="label">Projects</span>
             </div>
-            
-            <div class="skills-section">
-                <h3 class="skills-title">Technical Skills</h3>
-                <div class="skills-container">
-                    <div class="skill-item">
-                        <span class="skill-name">HTML</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-level="95%"></div>
-                        </div>
-                        <span class="skill-percent">95%</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">CSS</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-level="90%"></div>
-                        </div>
-                        <span class="skill-percent">90%</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">JavaScript</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-level="88%"></div>
-                        </div>
-                        <span class="skill-percent">88%</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">PHP</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-level="85%"></div>
-                        </div>
-                        <span class="skill-percent">85%</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Java</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-level="82%"></div>
-                        </div>
-                        <span class="skill-percent">82%</span>
-                    </div>
-                </div>
+            <div class="stat">
+              <span class="number">40+</span>
+              <span class="label">Clients</span>
             </div>
-        </div>
-    </div>
-</section>
-
-
-<script>
-    // Animate skill bars when section is in view
-    function animateSkills() {
-        const skillProgresses = document.querySelectorAll('.skill-progress');
-        skillProgresses.forEach(progress => {
-            const level = progress.getAttribute('data-level');
-            progress.style.width = level;
-        });
-    }
-    
-    // Check if about section is in view and animate
-    function checkAboutInView() {
-        const aboutSection = document.getElementById('about');
-        const rect = aboutSection.getBoundingClientRect();
-        const isInView = (
-            rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
-            rect.bottom >= 0
-        );
-        
-        if (isInView && !aboutSection.classList.contains('animated')) {
-            aboutSection.classList.add('animated');
-            animateSkills();
-        }
-    }
-    
-    // Initial check and add scroll listener
-    window.addEventListener('scroll', checkAboutInView);
-    window.addEventListener('load', checkAboutInView);
-</script>
-
-        <!-- Projects Section -->
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="projects-grid">
-                    <!-- Project 1 -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://placehold.co/600x400/000000/FFFFFF/png?text=Project+1" alt="Project 1">
-                            <div class="project-overlay">
-                                <a href="#" class="project-link">View Project</a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-title">E-Commerce Platform</h3>
-                            <p class="project-description">A full-featured online shopping platform with payment integration and inventory management.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">MongoDB</span>
-                            </div>
-                            <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 2 -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://placehold.co/600x400/000000/FFFFFF/png?text=Project+2" alt="Project 2">
-                            <div class="project-overlay">
-                                <a href="#" class="project-link">View Project</a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-title">Task Management App</h3>
-                            <p class="project-description">A productivity application for teams to collaborate and manage projects efficiently.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Vue.js</span>
-                                <span class="tech-tag">Firebase</span>
-                                <span class="tech-tag">Tailwind CSS</span>
-                            </div>
-                            <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://placehold.co/600x400/000000/FFFFFF/png?text=Project+3" alt="Project 3">
-                            <div class="project-overlay">
-                                <a href="#" class="project-link">View Project</a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-title">Health & Fitness Tracker</h3>
-                            <p class="project-description">A comprehensive health monitoring application with workout plans and nutrition tracking.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">React Native</span>
-                                <span class="tech-tag">GraphQL</span>
-                                <span class="tech-tag">PostgreSQL</span>
-                            </div>
-                            <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
+            <div class="stat">
+              <span class="number">3+</span>
+              <span class="label">Years</span>
             </div>
-        </section>
-
-  <!-- Portfolio & Socials Section -->
-<section id="portfolio" class="portfolio">
-    <div class="container">
-        <h2 class="section-title">Portfolio & Social Presence</h2>
-        
-        <div class="portfolio-content">
-            <div class="portfolio-intro">
-                <p class="intro-text">I create digital experiences that combine aesthetic appeal with functional excellence. My work spans responsive web applications, interactive platforms, and scalable solutions.</p>
-                
-                <div class="portfolio-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">50+</span>
-                        <span class="stat-label">Projects Completed</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">25+</span>
-                        <span class="stat-label">Happy Clients</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">4+</span>
-                        <span class="stat-label">Years Experience</span>
-                    </div>
-                </div>
-                
-                <a href="#" class="portfolio-button">
-                    <span>Explore Full Portfolio</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
+          </div>
+          
+          <div class="qr">
+            <span class="qr-note">Scan QR code from my business card</span>
+            <div class="qr-box">
+              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik00NSA0NWgxMHYxMEg0NXptMTAgMTBoMTB2MTBINTV6bTEwLTIwaDEwdjEwSDY1em0yMCAyMGgxMHYxMEg4NXptLTEwLTEwaDEwdjEwSDc1em0yMCA0MGgxMHYxMEg5NXptMC0yMGgxMHYxMEg5NXptLTMwIDBoMTB2MTBINjV6bTAgMjBoMTB2MTBINjV6bTIwLTIwaDIwdjIwSDEwNXptMCA0MGgxMHYxMGgtMTB6bTIwLTQwaDEwdjExMGgtMTB6bTAgNjBoMTB2MTBoLTEwem0yMC02MGgxMHYxMGgtMTB6bTAgMjBoMTB2MTBoLTEwem0wIDIwaDEwdjEwaC0xMHptMC0xMGgxMHYxMGgtMTB6bS0xMCAxMGgxMHYxMGgtMTB6bS0yMCA0MGgxMHYxMGgtMTB6bTIwIDBoMTB2MTBoLTEwem0tMTAgMTBoMTB2MTBoLTEweiIgZmlsbD0iIzAwMCIvPjwvc3ZnPg==" alt="QR Code" width="140" height="140">
             </div>
-            
-           <div class="socials-section">
-    <div class="section-header">
-        <h3 class="socials-title">Connect With Me</h3>
-        <p class="socials-subtitle">Let's collaborate and create something amazing together</p>
-    </div>
-    
-    <div class="social-grid">
-        <!-- Row 1 -->
-        <div class="social-row">
-            <a href="https://linkedin.com/in/becomingimran" class="social-card" target="_blank" aria-label="LinkedIn">
-                <div class="social-card-inner">
-                    <div class="social-icon-wrapper">
-                        <i class="fab fa-linkedin-in"></i>
-                    </div>
-                    <div class="social-info">
-                        <span class="social-name">LinkedIn</span>
-                        <span class="social-handle">@becomingimran</span>
-                    </div>
-                    <div class="social-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="https://github.com/becomingimran" class="social-card" target="_blank" aria-label="GitHub">
-                <div class="social-card-inner">
-                    <div class="social-icon-wrapper">
-                        <i class="fab fa-github"></i>
-                    </div>
-                    <div class="social-info">
-                        <span class="social-name">GitHub</span>
-                        <span class="social-handle">@becomingimran</span>
-                    </div>
-                    <div class="social-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </div>
-            </a>
+          </div>
         </div>
         
-        <!-- Row 2 -->
-        <div class="social-row">
-            <a href="https://twitter.com/becomingimran" class="social-card" target="_blank" aria-label="Twitter">
-                <div class="social-card-inner">
-                    <div class="social-icon-wrapper">
-                        <i class="fab fa-x-twitter"></i>
-                    </div>
-                    <div class="social-info">
-                        <span class="social-name">Twitter</span>
-                        <span class="social-handle">@becomingimran</span>
-                    </div>
-                    <div class="social-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="https://instagram.com/becomingimran" class="social-card" target="_blank" aria-label="Instagram">
-                <div class="social-card-inner">
-                    <div class="social-icon-wrapper">
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                    <div class="social-info">
-                        <span class="social-name">Instagram</span>
-                        <span class="social-handle">@becomingimran</span>
-                    </div>
-                    <div class="social-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </div>
-            </a>
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+          <span>Scroll to explore</span>
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
         </div>
-        
-        <!-- Row 3 -->
-        <div class="social-row">
-            <a href="https://threads.net/becomingimran" class="social-card" target="_blank" aria-label="Threads">
-                <div class="social-card-inner">
-                    <div class="social-icon-wrapper">
-                        <i class="fab fa-threads"></i>
-                    </div>
-                    <div class="social-info">
-                        <span class="social-name">Threads</span>
-                        <span class="social-handle">@becomingimran</span>
-                    </div>
-                    <div class="social-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="https://facebook.com/becomingimran" class="social-card" target="_blank" aria-label="Facebook">
-                <div class="social-card-inner">
-                    <div class="social-icon-wrapper">
-                        <i class="fab fa-facebook-f"></i>
-                    </div>
-                    <div class="social-info">
-                        <span class="social-name">Facebook</span>
-                        <span class="social-handle">/becomingimran</span>
-                    </div>
-                    <div class="social-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
-        </div>
-        </div>
-    </div>
-</section>
+      </section>
 
-<!-- Contact Section -->
-<section id="contact" class="contact">
-    <div class="container">
-        <h2 class="section-title">Let's Start a Conversation</h2>
+      <!-- Skills - Control Center Style -->
+      <section class="panel reveal" id="skills">
+        <h2>My Skills & Services</h2>
+        <p class="section-subtitle">I specialize in these technologies and services to help bring your ideas to life:</p>
         
-        <div class="contact-content">
-            <div class="contact-info">
-                <div class="info-card">
-                    <h3 class="info-title">Get In Touch</h3>
-                    <p class="info-description">I'm currently available for freelance projects and open to new opportunities. Let's discuss how we can work together to bring your ideas to life.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <span class="contact-label">Location</span>
-                                <span class="contact-value">Nairobi, Kenya</span>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-text">
-                                <span class="contact-label">Email</span>
-                                <span class="contact-value">imranshiundu@gmail.com</span>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-text">
-                                <span class="contact-label">Phone</span>
-                                <span class="contact-value">+254 740 293 859</span>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="contact-text">
-                                <span class="contact-label">Response Time</span>
-                                <span class="contact-value">Within 24 hours</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="contact-actions">
-                <div class="actions-card">
-                    <h3 class="actions-title">Quick Connect</h3>
-                    <p class="actions-subtitle">Choose your preferred method of communication</p>
-                    
-                    <div class="contact-buttons">
-                        <a href="https://wa.me/+254740293859" class="contact-button whatsapp-btn">
-                            <div class="button-icon">
-                                <i class="fab fa-whatsapp"></i>
-                            </div>
-                            <div class="button-content">
-                                <span class="button-title">WhatsApp Chat</span>
-                                <span class="button-subtitle">Instant messaging</span>
-                            </div>
-                            <i class="fas fa-arrow-right button-arrow"></i>
-                        </a>
-                        
-                        <a href="mailto:imranshiundu@gmail.com" class="contact-button email-btn">
-                            <div class="button-icon">
-                                <i class="far fa-envelope"></i>
-                            </div>
-                            <div class="button-content">
-                                <span class="button-title">Send Email</span>
-                                <span class="button-subtitle">Detailed discussions</span>
-                            </div>
-                            <i class="fas fa-arrow-right button-arrow"></i>
-                        </a>
-                        
-                        <a href="#hire" class="contact-button hire-btn">
-                            <div class="button-icon">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
-                            <div class="button-content">
-                                <span class="button-title">Hire Me</span>
-                                <span class="button-subtitle">Start a project</span>
-                            </div>
-                            <i class="fas fa-arrow-right button-arrow"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div class="control-grid">
+          <div class="control-item">
+            <span class="control-icon"><i class="fas fa-laptop-code"></i></span>
+            <span>Web Development</span>
+          </div>
+          <div class="control-item">
+            <span class="control-icon"><i class="fas fa-mobile-alt"></i></span>
+            <span>Mobile Apps</span>
+          </div>
+          <div class="control-item">
+            <span class="control-icon"><i class="fas fa-palette"></i></span>
+            <span>UI/UX Design</span>
+          </div>
+          <div class="control-item">
+            <span class="control-icon"><i class="fas fa-shopping-cart"></i></span>
+            <span>E-commerce</span>
+          </div>
+          <div class="control-item">
+            <span class="control-icon"><i class="fas fa-search"></i></span>
+            <span>SEO Optimization</span>
+          </div>
+          <div class="control-item">
+            <span class="control-icon"><i class="fas fa-chart-bar"></i></span>
+            <span>Data Analysis</span>
+          </div>
+          <div class="control-item">
+            <span class="control-icon"><i class="fas fa-server"></i></span>
+            <span>Backend Development</span>
+          </div>
+          <div class="control-item">
+            <span class="control-icon"><i class="fas fa-database"></i></span>
+            <span>Database Management</span>
+          </div>
         </div>
-    </div>
-</section>
-
-<style>
-    /* Portfolio Section Styles */
-    .portfolio {
-        padding: 5rem 0;
-        background: linear-gradient(135deg, var(--card-bg) 0%, rgba(248, 248, 248, 0.95) 100%);
-    }
-    
-    [data-theme="dark"] .portfolio {
-        background: linear-gradient(135deg, var(--card-bg) 0%, rgba(30, 30, 30, 0.95) 100%);
-    }
-    
-    .portfolio-content {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 4rem;
-        align-items: start;
-        margin-top: 3rem;
-    }
-    
-    .intro-text {
-        font-size: 1.2rem;
-        line-height: 1.8;
-        margin-bottom: 2.5rem;
-        color: var(--text-color);
-        opacity: 0.9;
-    }
-    
-    .portfolio-stats {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        margin: 2.5rem 0;
-    }
-    
-    .stat-item {
-        text-align: center;
-        padding: 1.5rem;
-        background: var(--bg-color);
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .stat-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    }
-    
-    [data-theme="dark"] .stat-item {
-        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
-    }
-    
-    [data-theme="dark"] .stat-item:hover {
-        box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
-    }
-    
-    .stat-number {
-        display: block;
-        font-size: 2.2rem;
-        font-weight: 700;
-        color: var(--accent-color);
-        margin-bottom: 0.5rem;
-    }
-    
-    .stat-label {
-        font-size: 0.95rem;
-        color: var(--text-color);
-        opacity: 0.8;
-    }
-    
-    .portfolio-button {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.8rem;
-        padding: 1rem 2.2rem;
-        background: var(--accent-color);
-        color: var(--bg-color);
-        text-decoration: none;
-        font-weight: 600;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-    
-    .portfolio-button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        gap: 1.2rem;
-    }
-    
-    [data-theme="dark"] .portfolio-button {
-        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
-    }
-    
-    /* Socials Section */
-    .socials-section {
-        background: var(--bg-color);
-        padding: 2.5rem;
-        border-radius: 16px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-        height: fit-content;
-        position: sticky;
-        top: 2rem;
-    }
-    
-    [data-theme="dark"] .socials-section {
-        box-shadow: 0 8px 25px rgba(255, 255, 255, 0.08);
-    }
-    
-    .section-header {
-        text-align: center;
-        margin-bottom: 2.5rem;
-    }
-    
-    .socials-title {
-        font-size: 1.6rem;
-        margin-bottom: 0.8rem;
-        color: var(--text-color);
-    }
-    
-    .socials-subtitle {
-        color: var(--text-color);
-        opacity: 0.7;
-        font-size: 1rem;
-    }
-    
-    .social-icons {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .social-icon {
-        display: flex;
-        align-items: center;
-        gap: 1.2rem;
-        padding: 1.2rem;
-        text-decoration: none;
-        color: var(--text-color);
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        border-radius: 12px;
-        transition: all 0.3s ease;
-        background: var(--card-bg);
-    }
-    
-    [data-theme="dark"] .social-icon {
-        border-color: rgba(255, 255, 255, 0.08);
-    }
-    
-    .social-icon:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-        border-color: var(--accent-color);
-    }
-    
-    [data-theme="dark"] .social-icon:hover {
-        box-shadow: 0 6px 18px rgba(255, 255, 255, 0.1);
-    }
-    
-    .social-icon-wrapper {
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        background: var(--accent-color);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--bg-color);
-        font-size: 1.2rem;
-        transition: transform 0.3s ease;
-    }
-    
-    .social-icon:hover .social-icon-wrapper {
-        transform: scale(1.1);
-    }
-    
-    .social-name {
-        font-weight: 600;
-        font-size: 1.1rem;
-    }
-    
-    .social-handle {
-        font-size: 0.9rem;
-        opacity: 0.7;
-        margin-left: auto;
-    }
-    
-    /* Contact Section Styles */
-    .contact {
-        padding: 5rem 0;
-        background: var(--bg-color);
-    }
-    
-    .contact-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        margin-top: 3rem;
-    }
-    
-    .info-card, .actions-card {
-        background: var(--card-bg);
-        padding: 2.5rem;
-        border-radius: 16px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-        height: 100%;
-    }
-    
-    [data-theme="dark"] .info-card,
-    [data-theme="dark"] .actions-card {
-        box-shadow: 0 8px 25px rgba(255, 255, 255, 0.08);
-    }
-    
-    .info-title, .actions-title {
-        font-size: 1.6rem;
-        margin-bottom: 1rem;
-        color: var(--text-color);
-    }
-    
-    .info-description, .actions-subtitle {
-        color: var(--text-color);
-        opacity: 0.8;
-        line-height: 1.7;
-        margin-bottom: 2.5rem;
-    }
-    
-    .contact-details {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-    
-    .contact-item {
-        display: flex;
-        align-items: center;
-        gap: 1.2rem;
-    }
-    
-    .contact-icon {
-        width: 50px;
-        height: 50px;
-        border-radius: 12px;
-        background: var(--accent-color);
-        color: var(--bg-color);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2rem;
-    }
-    
-    .contact-text {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .contact-label {
-        font-size: 0.9rem;
-        opacity: 0.7;
-        margin-bottom: 0.2rem;
-    }
-    
-    .contact-value {
-        font-weight: 600;
-        color: var(--text-color);
-    }
-    
-    .contact-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 1.2rem;
-    }
-    
-    .contact-button {
-        display: flex;
-        align-items: center;
-        gap: 1.2rem;
-        padding: 1.5rem;
-        text-decoration: none;
-        border-radius: 12px;
-        transition: all 0.3s ease;
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        background: var(--bg-color);
-    }
-    
-    [data-theme="dark"] .contact-button {
-        border-color: rgba(255, 255, 255, 0.08);
-    }
-    
-    .contact-button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    }
-    
-    [data-theme="dark"] .contact-button:hover {
-        box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
-    }
-    
-    .whatsapp-btn:hover {
-        border-color: #25D366;
-        background: rgba(37, 211, 102, 0.05);
-    }
-    
-    .email-btn:hover {
-        border-color: #EA4335;
-        background: rgba(234, 67, 53, 0.05);
-    }
-    
-    .hire-btn:hover {
-        border-color: var(--accent-color);
-        background: rgba(0, 0, 0, 0.05);
-    }
-    
-    [data-theme="dark"] .hire-btn:hover {
-        background: rgba(255, 255, 255, 0.05);
-    }
-    
-    .button-icon {
-        width: 50px;
-        height: 50px;
-        border-radius: 10px;
-        background: var(--card-bg);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.3rem;
-        color: var(--accent-color);
-    }
-    
-    .button-content {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .button-title {
-        font-weight: 600;
-        font-size: 1.1rem;
-        color: var(--text-color);
-    }
-    
-    .button-subtitle {
-        font-size: 0.9rem;
-        opacity: 0.7;
-        margin-top: 0.2rem;
-    }
-    
-    .button-arrow {
-        color: var(--text-color);
-        opacity: 0.5;
-        transition: transform 0.3s ease;
-    }
-    
-    .contact-button:hover .button-arrow {
-        transform: translateX(5px);
-        opacity: 1;
-    }
-    
-    /* Responsive Design */
-    @media (max-width: 1024px) {
-        .portfolio-content {
-            grid-template-columns: 1fr;
-            gap: 3rem;
-        }
         
-        .socials-section {
-            position: static;
-        }
-        
-        .portfolio-stats {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-    
-    @media (max-width: 768px) {
-        .contact-content {
-            grid-template-columns: 1fr;
-            gap: 3rem;
-        }
-        
-        .portfolio-stats {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-        
-        .socials-section,
-        .info-card,
-        .actions-card {
-            padding: 2rem;
-        }
-        
-        .contact-button {
-            padding: 1.2rem;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .social-icon {
-            flex-direction: column;
-            text-align: center;
-            gap: 1rem;
-            padding: 1.5rem;
-        }
-        
-        .social-handle {
-            margin-left: 0;
-        }
-        
-        .contact-item {
-            flex-direction: column;
-            text-align: center;
-            gap: 0.8rem;
-        }
-        
-        .contact-button {
-            flex-direction: column;
-            text-align: center;
-            gap: 1rem;
-        }
-        
-        .button-content {
-            align-items: center;
-        }
-        
-        .portfolio-button {
-            width: 100%;
-            justify-content: center;
-        }
-    }
-</style>
-
-        <!-- Hire Me Section -->
-        <section id="hire" class="hire-me">
-            <div class="container">
-                <h2 class="section-title">Ready to Work Together?</h2>
-                <p>Let's turn your ideas into reality with clean, efficient code and innovative solutions.</p>
-                <button class="hire-button" onclick="location.href='#contact'">Hire Me</button>
+        <div class="skills-detail">
+          <div class="ios-card">
+            <h3>Technical Skills</h3>
+            <div class="skill-bars">
+              <div class="skill">
+                <span class="skill-name">HTML/CSS</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="95%"></div>
+                </div>
+                <span class="skill-percentage">95%</span>
+              </div>
+              <div class="skill">
+                <span class="skill-name">JavaScript</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="90%"></div>
+                </div>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill">
+                <span class="skill-name">React</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="85%"></div>
+                </div>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill">
+                <span class="skill-name">PHP</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="80%"></div>
+                </div>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="skill">
+                <span class="skill-name">Java</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="75%"></div>
+                </div>
+                <span class="skill-percentage">75%</span>
+              </div>
+              
             </div>
-        </section>
+          </div>
+          
+          <div class="ios-card">
+            <h3>Services Offered</h3>
+            <div class="service-list">
+              <div class="service-item">
+                <i class="fas fa-globe"></i>
+                <div>
+                  <h4>Website Development</h4>
+                  <p>Custom websites tailored to your business needs</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-shopping-cart"></i>
+                <div>
+                  <h4>E-commerce Solutions</h4>
+                  <p>Online stores with payment integration</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-mobile-alt"></i>
+                <div>
+                  <h4>Mobile Applications</h4>
+                  <p>Cross-platform mobile apps</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-paint-brush"></i>
+                <div>
+                  <h4>UI/UX Design</h4>
+                  <p>User-friendly and attractive interfaces</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="panel reveal" id="projects">
+        <h2>Featured Projects</h2>
+        <p class="section-subtitle">Here are some of my recent projects that I've built for clients:</p>
+        
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web Development</button>
+          <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+          <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+        </div>
+        
+        <div class="project-grid">
+          <div class="project-card" data-category="web ecommerce">
+            <div class="project-img">
+              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMzAwIDIwMCI+PHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmNWY1ZjUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmaWxsPSIjMzMzIj5FbGVnYW50IEUtY29tbWVyY2UgU3RvcmU8L3RleHQ+PC9zdmc+" alt="E-commerce Website">
+              <div class="project-overlay">
+                <button class="project-preview"><i class="fas fa-eye"></i> Preview</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Online Store</h3>
+              <p class="project-desc">A full online shopping website with payment system and admin panel.</p>
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">PHP</span>
+                <span class="project-tag">MySQL</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn outline">View Project</a>
+                <a href="#" class="btn icon-btn"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-category="web">
+            <div class="project-img">
+              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMzAwIDIwMCI+PHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNlM2Y0ZmYiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmaWxsPSIjMzMzIj5Nb2Rlcm4gQ29ycG9yYXRlIFdlYnNpdGU8L3RleHQ+PC9zdmc+" alt="Business Portfolio">
+              <div class="project-overlay">
+                <button class="project-preview"><i class="fas fa-eye"></i> Preview</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Company Website</h3>
+              <p class="project-desc">A modern website for a business to showcase their services and products.</p>
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">JavaScript</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn outline">View Project</a>
+                <a href="#" class="btn icon-btn"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-category="mobile">
+            <div class="project-img">
+              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMzAwIDIwMCI+PHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmZmYyZWMiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmaWxsPSIjMzMzIj5UYXNrIE1hbmFnZW1lbnQgQXBwPC90ZXh0Pjwvc3ZnPg==" alt="Mobile App">
+              <div class="project-overlay">
+                <button class="project-preview"><i class="fas fa-eye"></i> Preview</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Task Manager App</h3>
+              <p class="project-desc">An application to help users organize their daily tasks and reminders.</p>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">CSS</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn outline">View Project</a>
+                <a href="#" class="btn icon-btn"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-category="web ecommerce">
+            <div class="project-img">
+              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMzAwIDIwMCI+PHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmNWY1ZjUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmaWxsPSIjMzMzIj5SZXN0YXVyYW50IEJvb2tpbmc8L3RleHQ+PC9zdmc+" alt="Restaurant Booking">
+              <div class="project-overlay">
+                <button class="project-preview"><i class="fas fa-eye"></i> Preview</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Restaurant Booking System</h3>
+              <p class="project-desc">Online reservation system for restaurants with table management.</p>
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">PHP</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn outline">View Project</a>
+                <a href="#" class="btn icon-btn"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="view-more">
+          <a href="#" class="btn outline">View All Projects</a>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="panel reveal" id="testimonials">
+        <h2>Client Testimonials</h2>
+        <p class="section-subtitle">What my clients say about working with me:</p>
+        
+        <div class="testimonials-container">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"Imran delivered an exceptional e-commerce website for our business. His attention to detail and communication throughout the project were outstanding."</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIzMCIgZmlsbD0iI2U0ZTRlNCIvPjxjaXJjbGUgY3g9IjMwIiBjeT0iMjQiIHI9IjgiIGZpbGw9IiNhOGE4YTgiLz48cGF0aCBkPSJNMzAgMzhjLTYgMC04IDQtOCA0aDE2czItNC04LTR6IiBmaWxsPSIjYThhOGE4Ii8+PC9zdmc+" alt="Sarah Johnson">
+              </div>
+              <div class="author-details">
+                <h4>Sarah Johnson</h4>
+                <p>CEO, Fashion Store</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"The mobile app Imran developed for our startup exceeded our expectations. He was responsive to feedback and delivered ahead of schedule."</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIzMCIgZmlsbD0iI2U0ZTRlNCIvPjxjaXJjbGUgY3g9IjMwIiBjeT0iMjQiIHI9IjgiIGZpbGw9IiNhOGE4YTgiLz48cGF0aCBkPSJNMzAgMzhjLTYgMC04IDQtOCA0aDE2czItNC04LTR6IiBmaWxsPSIjYThhOGE4Ii8+PC9zdmc+" alt="Michael Chen">
+              </div>
+              <div class="author-details">
+                <h4>Michael Chen</h4>
+                <p>Founder, TechStart</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p class="testimonial-text">"Imran transformed our outdated website into a modern, responsive platform that has significantly increased our online engagement and sales."</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIzMCIgZmlsbD0iI2U0ZTRlNCIvPjxjaXJjbGUgY3g9IjMwIiBjeT0iMjQiIHI9IjgiIGZpbGwPSIjYThhOGE4Ii8+PHBhdGggZD0iTTMwIDM4Yy02IDAtOCA0LTggNGgxNnMyLTQtOC00eiIgZmlsbD0iI2E4YThhOCIvPjwvc3ZnPg==" alt="Emily Rodriguez">
+              </div>
+              <div class="author-details">
+                <h4>Emily Rodriguez</h4>
+                <p>Marketing Director, RetailCo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="clients-section">
+          <h3>Trusted By</h3>
+          <div class="clients-grid">
+            <div class="client-logo">
+              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCAxMjAgNjAiPjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iNjAiIGZpbGw9IiNmNWY1ZjUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmaWxsPSIjMzMzIj5DbGllbnQgTG9nbzwvdGV4dD48L3N2Zz4=" alt="Client 1">
+            </div>
+            <div class="client-logo">
+              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCAxMjAgNjAiPjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iNjAiIGZpbGw9IiNmNWY1ZjUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmaWxsPSIjMzMzIj5DbGllbnQgTG9nbzwvdGV4dD48L3N2Zz4=" alt="Client 2">
+            </div>
+            <div class="client-logo">
+              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCAxMjAgNjAiPjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iNjAiIGZpbGw9IiNmNWY1ZjUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmaWxsPSIjMzMzIj5DbGllbnQgTG9nbzwvdGV4dD48L3N2Zz4=" alt="Client 3">
+            </div>
+            <div class="client-logo">
+              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCAxMjAgNjAiPjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iNjAiIGZpbGw9IiNmNWY1ZjUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmaWxsPSIjMzMzIj5DbGllbnQgTG9nbzwvdGV4dD48L3N2Zz4=" alt="Client 4">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="panel reveal" id="stats">
+        <h2>My Experience</h2>
+        <p class="section-subtitle">Numbers that show my experience and what I can deliver:</p>
+        
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+            <div class="stat-value" data-count="50">0</div>
+            <div class="stat-label">Projects Done</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+            <div class="stat-value" data-count="3">0</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fas fa-user-check"></i></div>
+            <div class="stat-value" data-count="40">0</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fas fa-award"></i></div>
+            <div class="stat-value" data-count="100">0</div>
+            <div class="stat-label">Satisfaction</div>
+          </div>
+        </div>
+        
+        <div class="timeline-section">
+          <h3>Work Experience</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date">2022 - Present</div>
+              <div class="timeline-content">
+                <h4>Senior Web Developer</h4>
+                <p>Tech Solutions Inc.</p>
+                <p>Leading development of complex web applications and mentoring junior developers.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2020 - 2022</div>
+              <div class="timeline-content">
+                <h4>Frontend Developer</h4>
+                <p>Digital Creations Agency</p>
+                <p>Developed responsive websites and implemented UI/UX designs for various clients.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2019 - 2020</div>
+              <div class="timeline-content">
+                <h4>Junior Developer</h4>
+                <p>StartUp Ventures</p>
+                <p>Assisted in developing web applications and maintaining existing codebase.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="ios-card">
+          <h3>My Approach</h3>
+          <p>I focus on understanding what my clients need and delivering solutions that work for their business. I believe in clean code, good design, and making websites that are easy to use.</p>
+          <p>I work closely with clients to make sure they are happy with the final product.</p>
+        </div>
+      </section>
+
+      <!-- Links Section -->
+      <section class="panel reveal" id="links">
+        <h2>My Online Profiles</h2>
+        <p class="section-subtitle">Connect with me on these platforms:</p>
+        
+        <div class="link-grid">
+          <a class="link-tile" href="https://example.com" target="_blank" rel="noopener">
+            <span class="icon"><i class="fas fa-globe"></i></span>
+            <span>Portfolio Website</span>
+          </a>
+          <a class="link-tile" href="https://linkedin.com/in/your-handle" target="_blank" rel="noopener">
+            <span class="icon"><i class="fab fa-linkedin"></i></span>
+            <span>LinkedIn</span>
+          </a>
+          <a class="link-tile" href="https://github.com/your-handle" target="_blank" rel="noopener">
+            <span class="icon"><i class="fab fa-github"></i></span>
+            <span>GitHub</span>
+          </a>
+          <a class="link-tile" href="https://x.com/your-handle" target="_blank" rel="noopener">
+            <span class="icon"><i class="fab fa-twitter"></i></span>
+            <span>X (Twitter)</span>
+          </a>
+          <a class="link-tile" href="https://instagram.com/your-handle" target="_blank" rel="noopener">
+            <span class="icon"><i class="fab fa-instagram"></i></span>
+            <span>Instagram</span>
+          </a>
+          <a class="link-tile" href="https://dribbble.com/your-handle" target="_blank" rel="noopener">
+            <span class="icon"><i class="fab fa-dribbble"></i></span>
+            <span>Dribbble</span>
+          </a>
+          <a class="link-tile" href="https://behance.net/your-handle" target="_blank" rel="noopener">
+            <span class="icon"><i class="fab fa-behance"></i></span>
+            <span>Behance</span>
+          </a>
+          <a class="link-tile" href="https://medium.com/@your-handle" target="_blank" rel="noopener">
+            <span class="icon"><i class="fab fa-medium"></i></span>
+            <span>Medium</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="panel reveal" id="contact">
+        <h2>Let's Work Together</h2>
+        <p class="section-subtitle">Reach out to discuss your project or idea:</p>
+        
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Get in touch</h3>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p>imranshiundu@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h4>Phone</h4>
+                <p>+254 740 293 859</p>
+                <p>+254 706 858 992</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Location</h4>
+                <p>Nairobi, Kenya</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h4>Working Hours</h4>
+                <p>Mon - Fri: 9AM - 6PM</p>
+                <p>Sat: 10AM - 2PM</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-form-container">
+            <h3>Send a message</h3>
+            <form class="contact-form" id="projectInquiryForm">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+              </div>
+              <div class="form-group">
+                <label for="projectType">Project Type</label>
+                <select id="projectType" name="projectType">
+                  <option value="">Select project type</option>
+                  <option value="website">Website Development</option>
+                  <option value="ecommerce">E-commerce Store</option>
+                  <option value="mobile">Mobile Application</option>
+                  <option value="design">UI/UX Design</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="budget">Project Budget (USD)</label>
+                <select id="budget" name="budget">
+                  <option value="">Select budget range</option>
+                  <option value="500-1000">$500 - $1,000</option>
+                  <option value="1000-2500">$1,000 - $2,500</option>
+                  <option value="2500-5000">$2,500 - $5,000</option>
+                  <option value="5000+">$5,000+</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Project Details</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn primary">Send Message</button>
+            </form>
+          </div>
+        </div>
+        
+        <div class="contact-grid">
+          <a class="btn wide" href="https://wa.me/254740293859?text=Hi%20Imran%2C%20I%27d%20like%20to%20hire%20you" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> WhatsApp (+254 740 293 859)
+          </a>
+          <a class="btn wide" href="https://wa.me/254706858992?text=Hi%20Imran%2C%20I%27d%20like%20to%20hire%20you" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> WhatsApp (+254 706 858 992)
+          </a>
+          <a class="btn wide outline" href="mailto:imranshiundu@gmail.com?subject=Project%20Inquiry%20from%20Your%20Website">
+            <i class="fas fa-envelope"></i> Send Me an Email
+          </a>
+        </div>
+        
+        <div class="ios-card">
+          <h3>What happens next?</h3>
+          <ol>
+            <li>You contact me with your project details</li>
+            <li>We discuss your needs and timeline</li>
+            <li>I prepare a proposal and quote</li>
+            <li>We start working on your project</li>
+          </ol>
+        </div>
+      </section>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="copyright">© 2025 Becoming Imran</div>
-            <p class="quote">"Innovation doesn't wait for permission — it builds its own path."</p>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <svg class="mark" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 4v16h3V10l9 10h4V4h-3v10L8 4H4z" fill="currentColor"/>
+            <path d="M21 5h-3V2l3 3z" fill="currentColor"/>
+          </svg>
+          <span class="brand-name">BECOMING IMRAN</span>
+          <p>Creating digital experiences that help businesses grow.</p>
         </div>
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Navigation</h4>
+            <a href="#top">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#stats">Experience</a>
+            <a href="#contact">Contact</a>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Services</h4>
+            <a href="#skills">Web Development</a>
+            <a href="#skills">Mobile Apps</a>
+            <a href="#skills">UI/UX Design</a>
+            <a href="#skills">E-commerce</a>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Connect</h4>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <span>© 2025 Imran Shiundu. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <a href="#top" class="top-link">Back to top <i class="fas fa-arrow-up"></i></a>
+      </div>
     </footer>
+  </div>
 
-    <script src="script.js"></script>
+  <!-- Floating Action Button -->
+  <a href="#contact" class="fab">
+    <i class="fas fa-comment"></i>
+  </a>
+
+  <!-- Project Modal -->
+  <div class="modal" id="projectModal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div class="modal-body">
+        <img src="" alt="Project Image" class="modal-image">
+        <div class="modal-details">
+          <h2 class="modal-title"></h2>
+          <p class="modal-description"></p>
+          <div class="modal-tags"></div>
+          <a href="#" class="btn primary modal-link">View Live Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div class="toast" id="notificationToast">
+    <div class="toast-content">
+      <i class="fas fa-check-circle toast-icon"></i>
+      <div class="toast-message"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
