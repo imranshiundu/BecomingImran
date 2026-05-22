@@ -23,7 +23,11 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  background: var(--paper);
+  background:
+    linear-gradient(rgba(32,32,32,0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(32,32,32,0.018) 1px, transparent 1px),
+    var(--paper);
+  background-size: 52px 52px;
   font-family: var(--font-body);
   overflow-x: hidden;
 }
@@ -96,7 +100,7 @@ img { display: block; max-width: 100%; }
   min-height: calc(100svh - 3.25rem);
   padding: 0 var(--pad-x);
   overflow: hidden;
-  background: var(--paper);
+  background: transparent;
   animation: pageIn 700ms ease both;
 }
 
@@ -108,35 +112,35 @@ img { display: block; max-width: 100%; }
 .hero-title,
 .about-title {
   position: absolute;
-  left: clamp(1.15rem, 2vw, 2.55rem);
-  top: clamp(3.1rem, 6.9vw, 6.9rem);
+  left: clamp(1.2rem, 2vw, 2.45rem);
+  top: clamp(3.7rem, 5.95vw, 5.85rem);
   z-index: 1;
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(17rem, 39.1vw, 46rem);
+  font-size: clamp(20rem, 40.35vw, 47rem);
   font-weight: 900;
-  letter-spacing: -0.055em;
-  line-height: 0.86;
+  letter-spacing: -0.061em;
+  line-height: 0.84;
   text-transform: uppercase;
   color: var(--ink);
   white-space: nowrap;
-  transform: scaleX(1.24);
+  transform: scaleX(1.255);
   transform-origin: left top;
   animation: heroTypeIn 860ms cubic-bezier(.2, .85, .2, 1) both;
 }
 
 @keyframes heroTypeIn {
-  from { transform: translateY(1.1rem) scaleX(1.24); opacity: 0; }
-  to { transform: translateY(0) scaleX(1.24); opacity: 1; }
+  from { transform: translateY(1.1rem) scaleX(1.255); opacity: 0; }
+  to { transform: translateY(0) scaleX(1.255); opacity: 1; }
 }
 
 .portrait-card {
   position: absolute;
   left: 50%;
-  top: clamp(25.9rem, 46.95vw, 30.3rem);
+  top: clamp(22.7rem, 38.5vw, 25.05rem);
   z-index: 4;
-  width: clamp(36rem, 36vw, 43rem);
-  height: clamp(24rem, 26.55vw, 30rem);
+  width: clamp(34rem, 36vw, 42.9rem);
+  height: clamp(25.1rem, 31.6vw, 39rem);
   margin: 0;
   transform: translate(-50%, -50%);
   border-radius: clamp(4rem, 4.8vw, 5.85rem);
@@ -157,8 +161,8 @@ img { display: block; max-width: 100%; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 38%;
-  filter: saturate(0.96) contrast(1.02);
+  object-position: center center;
+  filter: saturate(0.98) contrast(1.01);
 }
 
 .portrait-card figcaption,
@@ -311,7 +315,7 @@ img { display: block; max-width: 100%; }
 @media (max-width: 1180px) {
   .hero-title { font-size: clamp(14rem, 43vw, 30rem); transform: scaleX(1.08); }
   @keyframes heroTypeIn { from { transform: translateY(1rem) scaleX(1.08); opacity: 0; } to { transform: translateY(0) scaleX(1.08); opacity: 1; } }
-  .portrait-card { width: min(52vw, 43rem); height: min(40vw, 30rem); top: 50%; }
+  .portrait-card { width: min(52vw, 43rem); height: min(48vw, 39rem); top: 48%; }
 }
 
 @media (max-width: 980px) {
@@ -320,7 +324,7 @@ img { display: block; max-width: 100%; }
   .hero { min-height: calc(100svh - 3rem); }
   .hero-title { top: 5.8rem; font-size: clamp(8rem, 37vw, 19rem); transform: scaleX(1.04); }
   @keyframes heroTypeIn { from { transform: translateY(1rem) scaleX(1.04); opacity: 0; } to { transform: translateY(0) scaleX(1.04); opacity: 1; } }
-  .portrait-card { width: min(74vw, 30rem); height: min(61vw, 27rem); top: 50%; border-radius: 3.4rem; }
+  .portrait-card { width: min(74vw, 30rem); height: min(72vw, 34rem); top: 50%; border-radius: 3.4rem; }
   .section-heading h2 { font-size: clamp(4.3rem, 22vw, 10rem); }
   .work-row { grid-template-columns: auto minmax(0, 1fr); min-height: 4.6rem; }
   .row-title { font-size: clamp(1.75rem, 8vw, 3.7rem); }
@@ -345,7 +349,7 @@ img { display: block; max-width: 100%; }
   .nav-link { justify-content: center; gap: 0.25rem; }
   .hero-title { top: 6rem; font-size: clamp(6.5rem, 44vw, 11.5rem); transform: scaleX(1.02); }
   @keyframes heroTypeIn { from { transform: translateY(1rem) scaleX(1.02); opacity: 0; } to { transform: translateY(0) scaleX(1.02); opacity: 1; } }
-  .portrait-card { width: 82vw; height: 58vw; border-radius: 2.4rem; top: 49%; }
+  .portrait-card { width: 82vw; height: 75vw; border-radius: 2.4rem; top: 49%; }
   .work-marquee { animation: none; width: auto; flex-wrap: wrap; gap: 0.65rem 1rem; }
   .row-title { white-space: normal; }
   .proof-card p,
