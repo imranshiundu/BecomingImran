@@ -1,4 +1,4 @@
-/* Measured Zendaya-style hero/nav layer — type-only version. */
+/* Measured Zendaya-style hero/nav layer — type-only masthead. */
 
 :root {
   --paper: #e5dece;
@@ -66,11 +66,10 @@ body::after,
   position: absolute;
   z-index: 1;
   left: var(--pad-x);
-  top: clamp(5.0rem, 5.55vw, 6.3rem);
+  top: clamp(7.15rem, 7.05vw, 8.45rem);
+  width: calc(100vw - (var(--pad-x) * 2));
   margin: 0;
   display: block;
-  font-family: "Anton", "Archivo Black", Impact, sans-serif;
-  font-weight: 900;
   color: var(--ink);
   user-select: none;
   pointer-events: none;
@@ -81,27 +80,48 @@ body::after,
 .hero-word {
   display: block;
   white-space: nowrap;
-  font: inherit;
-  line-height: 0.74;
-  letter-spacing: -0.073em;
   transform-origin: left top;
 }
 
+/* This is intentionally a small masthead label, not a second giant word. */
 .hero-word--becoming {
-  font-size: clamp(13.3rem, 21.15vw, 25.6rem);
-  transform: scaleX(1.205);
+  margin: 0 0 clamp(0.92rem, 1.15vw, 1.38rem) 0;
+  font-family: "Archivo Black", "Arial Black", sans-serif;
+  font-size: clamp(1.9rem, 1.98vw, 2.42rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  transform: none;
 }
 
+/* The oversized word carries the Zendaya-style hero weight. */
 .hero-word--imran {
-  margin-top: clamp(-1.2rem, -1.25vw, -0.8rem);
-  font-size: clamp(31.5rem, 40.15vw, 48.25rem);
-  transform: scaleX(1.82);
+  margin: 0;
+  font-family: "Anton", "Archivo Black", Impact, sans-serif;
+  font-size: clamp(25.5rem, 40.8vw, 49rem);
+  font-weight: 900;
+  line-height: 0.76;
+  letter-spacing: -0.071em;
+  transform: scaleX(1.015);
 }
 
 .portrait-card,
 .portrait-card img,
 .hero img,
-.hero figure {
+.hero figure,
+.hero picture,
+.hero video,
+.hero-kicker,
+.hero-copy,
+.hero-description,
+.hero-actions,
+.hero-cta,
+.hero-meta,
+.portrait-caption,
+.archive-tag,
+.builder-archive,
+[class*="portrait"],
+[class*="hero-caption"] {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
@@ -118,18 +138,18 @@ body::after,
 @media (max-width: 980px) {
   :root { --nav-h: 48px; }
   .site-nav { font-size: clamp(0.72rem, 2.4vw, 0.9rem); padding-inline: 0.8rem; }
-  .hero { min-height: 92svh; }
-  .hero-title { top: 5.35rem; }
-  .hero-word--becoming { font-size: clamp(5.1rem, 21vw, 9rem); transform: scaleX(1.1); }
-  .hero-word--imran { margin-top: -0.35rem; font-size: clamp(14.8rem, 53vw, 28rem); transform: scaleX(1.48); }
+  .hero { min-height: 90svh; }
+  .hero-title { top: clamp(5.8rem, 11vw, 7rem); }
+  .hero-word--becoming { font-size: clamp(1.3rem, 4.4vw, 2rem); margin-bottom: 0.75rem; }
+  .hero-word--imran { font-size: clamp(11.4rem, 54vw, 30rem); line-height: 0.78; letter-spacing: -0.068em; transform: scaleX(1); }
 }
 
 @media (max-width: 620px) {
   :root { --nav-h: 44px; --pad-x: 0.82rem; }
   .site-nav { font-size: 0.68rem; letter-spacing: -0.04em; }
   .nav-link { gap: 0.22rem; }
-  .hero { min-height: 82svh; }
-  .hero-title { top: 5rem; }
-  .hero-word--becoming { font-size: clamp(3.15rem, 20vw, 5.1rem); transform: scaleX(1.1); }
-  .hero-word--imran { margin-top: -0.2rem; font-size: clamp(9.8rem, 54vw, 16rem); transform: scaleX(1.45); }
+  .hero { min-height: 78svh; }
+  .hero-title { top: 5.35rem; }
+  .hero-word--becoming { font-size: clamp(1rem, 5.8vw, 1.55rem); margin-bottom: 0.48rem; }
+  .hero-word--imran { font-size: clamp(7.9rem, 53vw, 16rem); line-height: 0.82; letter-spacing: -0.064em; }
 }
