@@ -1,21 +1,9 @@
 {
   "name": "Becoming Imran",
   "short_name": "Imran",
-  "description": "One-page link hub to portfolio, socials, and direct contact.",
+  "description": "A cinematic one-page archive of Imran Shiundu's work, projects, writing, and proof.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#000000",
-  "icons": [
-    {
-      "src": "assets/icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+  "background_color": "#ded7c7",
+  "theme_color": "#202020"
 }
