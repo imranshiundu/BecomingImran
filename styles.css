@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Inter:wght@500;600;700;800&display=swap');
 
 :root {
-  --paper: #ded7c7;
+  --paper: #e5dece;
   --ink: #202020;
   --muted: rgba(32, 32, 32, 0.68);
   --rule: rgba(32, 32, 32, 0.78);
@@ -137,15 +137,15 @@ img { display: block; max-width: 100%; }
 .portrait-card {
   position: absolute;
   left: 50%;
-  top: clamp(22.7rem, 38.5vw, 25.05rem);
+  top: clamp(21.5rem, 22vw, 26.4rem);
   z-index: 4;
-  width: clamp(34rem, 36vw, 42.9rem);
-  height: clamp(25.1rem, 31.6vw, 39rem);
+  width: clamp(36rem, 42vw, 50.45rem);
+  height: clamp(34.8rem, 40.65vw, 48.75rem);
   margin: 0;
   transform: translate(-50%, -50%);
-  border-radius: clamp(4rem, 4.8vw, 5.85rem);
+  border-radius: clamp(3.5rem, 4.15vw, 5rem);
   overflow: hidden;
-  background: #ddd4c3;
+  background: #e5dece;
   box-shadow: none;
   animation: portraitIn 900ms cubic-bezier(.2, .85, .2, 1) 90ms both;
 }
@@ -162,7 +162,6 @@ img { display: block; max-width: 100%; }
   height: 100%;
   object-fit: cover;
   object-position: center center;
-  filter: saturate(0.98) contrast(1.01);
 }
 
 .portrait-card figcaption,
@@ -309,13 +308,13 @@ img { display: block; max-width: 100%; }
 .contact-strip input::placeholder { color: rgba(32, 32, 32, 0.72); }
 .contact-strip button { min-width: clamp(10rem, 15vw, 15rem); padding: 0 2.4rem; background: var(--ink); color: var(--paper); font-family: var(--font-nav); font-size: clamp(1.3rem, 2vw, 2rem); letter-spacing: -0.06em; text-transform: uppercase; cursor: pointer; }
 
-.site-footer { min-height: 5.4rem; display: grid; grid-template-columns: 1fr auto 1fr; align-items: end; gap: 1rem; padding: 0 var(--pad-x) 1.8rem; background: linear-gradient(rgba(222, 215, 199, 0.82), rgba(222, 215, 199, 0.82)), repeating-linear-gradient(90deg, var(--ink) 0 8rem, transparent 8rem 9rem); font-weight: 900; }
+.site-footer { min-height: 5.4rem; display: grid; grid-template-columns: 1fr auto 1fr; align-items: end; gap: 1rem; padding: 0 var(--pad-x) 1.8rem; background: linear-gradient(rgba(229, 222, 206, 0.82), rgba(229, 222, 206, 0.82)), repeating-linear-gradient(90deg, var(--ink) 0 8rem, transparent 8rem 9rem); font-weight: 900; }
 .site-footer :last-child { text-align: right; }
 
 @media (max-width: 1180px) {
   .hero-title { font-size: clamp(14rem, 43vw, 30rem); transform: scaleX(1.08); }
   @keyframes heroTypeIn { from { transform: translateY(1rem) scaleX(1.08); opacity: 0; } to { transform: translateY(0) scaleX(1.08); opacity: 1; } }
-  .portrait-card { width: min(52vw, 43rem); height: min(48vw, 39rem); top: 48%; }
+  .portrait-card { width: min(58vw, 43rem); height: min(56vw, 41.7rem); top: 48%; border-radius: clamp(3.4rem, 5.6vw, 4.7rem); }
 }
 
 @media (max-width: 980px) {
@@ -324,7 +323,7 @@ img { display: block; max-width: 100%; }
   .hero { min-height: calc(100svh - 3rem); }
   .hero-title { top: 5.8rem; font-size: clamp(8rem, 37vw, 19rem); transform: scaleX(1.04); }
   @keyframes heroTypeIn { from { transform: translateY(1rem) scaleX(1.04); opacity: 0; } to { transform: translateY(0) scaleX(1.04); opacity: 1; } }
-  .portrait-card { width: min(74vw, 30rem); height: min(72vw, 34rem); top: 50%; border-radius: 3.4rem; }
+  .portrait-card { width: min(76vw, 33rem); height: min(73vw, 36rem); top: 50%; border-radius: 3.1rem; }
   .section-heading h2 { font-size: clamp(4.3rem, 22vw, 10rem); }
   .work-row { grid-template-columns: auto minmax(0, 1fr); min-height: 4.6rem; }
   .row-title { font-size: clamp(1.75rem, 8vw, 3.7rem); }
@@ -349,7 +348,7 @@ img { display: block; max-width: 100%; }
   .nav-link { justify-content: center; gap: 0.25rem; }
   .hero-title { top: 6rem; font-size: clamp(6.5rem, 44vw, 11.5rem); transform: scaleX(1.02); }
   @keyframes heroTypeIn { from { transform: translateY(1rem) scaleX(1.02); opacity: 0; } to { transform: translateY(0) scaleX(1.02); opacity: 1; } }
-  .portrait-card { width: 82vw; height: 75vw; border-radius: 2.4rem; top: 49%; }
+  .portrait-card { width: 84vw; height: 81vw; border-radius: 2.2rem; top: 49%; }
   .work-marquee { animation: none; width: auto; flex-wrap: wrap; gap: 0.65rem 1rem; }
   .row-title { white-space: normal; }
   .proof-card p,
