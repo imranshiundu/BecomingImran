@@ -1,11 +1,15 @@
 /* Pixel-measured hero correction against the Zendaya reference.
-   This file intentionally overrides only the hero/nav layer, not the rest of the site. */
+   This file intentionally overrides only the hero/nav layer, not the rest of the site.
+   It also neutralizes any legacy deployed hero copy/captions if Vercel serves stale HTML. */
 
 :root {
   --paper: #e5dece;
   --ink: #202020;
   --nav-h: 52px;
   --pad-x: clamp(0.9rem, 2.02vw, 2.45rem);
+  --hero-card-w: clamp(34.25rem, 35.68vw, 42.8rem);
+  --hero-card-h: clamp(38.95rem, 40.62vw, 48.85rem);
+  --hero-card-r: clamp(2.15rem, 2.55vw, 3.05rem);
 }
 
 html,
@@ -19,6 +23,25 @@ body::after,
 .hero::after {
   content: none !important;
   display: none !important;
+}
+
+/* Kill the previous custom copy layer shown on the live deployment. */
+.hero-kicker,
+.hero-copy,
+.hero-description,
+.hero-actions,
+.hero-cta,
+.hero-meta,
+.portrait-caption,
+.portrait-card figcaption,
+.archive-tag,
+.builder-archive,
+[class*="hero-caption"],
+[class*="portrait-caption"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 .site-nav {
@@ -56,7 +79,7 @@ body::after,
 
 .hero-title {
   left: var(--pad-x);
-  top: clamp(4.7rem, 5.46vw, 6.15rem);
+  top: clamp(3.65rem, 4.72vw, 5.3rem);
   font-size: clamp(32rem, 40.25vw, 48.5rem);
   line-height: 0.74;
   letter-spacing: -0.071em;
@@ -67,22 +90,32 @@ body::after,
 
 .portrait-card {
   left: 50%;
-  top: clamp(21.35rem, 24.95vw, 27.35rem);
-  width: clamp(34.25rem, 35.68vw, 42.8rem);
-  height: clamp(38.95rem, 40.62vw, 48.85rem);
-  border-radius: clamp(3.05rem, 3.72vw, 4.55rem);
+  top: clamp(20.25rem, 23.85vw, 26.4rem);
+  width: var(--hero-card-w);
+  height: var(--hero-card-h);
+  border-radius: var(--hero-card-r);
   transform: translateX(-50%);
-  background: #eee8dd;
+  overflow: hidden;
+  background-color: #eee8dd;
+  background-image: url("assets/imran-headphones.svg?v=deploy-20260522-1657");
+  background-size: cover;
+  background-position: 50% 50%;
   box-shadow: none;
   animation: portraitIn 860ms cubic-bezier(.16, 1, .3, 1) 110ms both;
 }
 
-.portrait-card img {
+.portrait-card > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 50% 50%;
   transform: none;
+  display: block;
+}
+
+/* If stale HTML still points at the old front-facing SVG, hide it and let the corrected background image show. */
+.portrait-card > img:not([src*="imran-headphones"]) {
+  opacity: 0 !important;
 }
 
 @keyframes heroTitleIn {
@@ -108,16 +141,16 @@ body::after,
   }
 
   .hero-title {
-    top: 4.55rem;
+    top: 4.05rem;
     font-size: clamp(15rem, 54vw, 28rem);
     transform: scaleX(1.48);
   }
 
   .portrait-card {
-    top: clamp(17.8rem, 51vw, 25rem);
+    top: clamp(17.1rem, 49vw, 24.1rem);
     width: min(78vw, 27rem);
     height: min(88.8vw, 30.8rem);
-    border-radius: clamp(2.05rem, 6.2vw, 3.35rem);
+    border-radius: clamp(1.7rem, 5.2vw, 2.55rem);
   }
 
   @keyframes heroTitleIn {
@@ -141,16 +174,16 @@ body::after,
   }
 
   .hero-title {
-    top: 4.2rem;
+    top: 3.82rem;
     font-size: clamp(10.2rem, 55vw, 16rem);
     transform: scaleX(1.45);
   }
 
   .portrait-card {
-    top: clamp(13.7rem, 57vw, 18.6rem);
+    top: clamp(13.15rem, 55vw, 17.9rem);
     width: min(76vw, 20rem);
     height: min(87vw, 22.5rem);
-    border-radius: 2.1rem;
+    border-radius: 1.65rem;
   }
 
   @keyframes heroTitleIn {
