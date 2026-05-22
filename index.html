@@ -1,743 +1,169 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Imran Shiundu — Portfolio & Services</title>
-  <meta name="description" content="Imran Shiundu — Website Developer, Startup Developer, and Software Engineer. Hire me for your next project." />
-  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
-  <link rel="preload" href="styles.css" as="style">
-  <link rel="stylesheet" href="styles.css">
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Google Fonts -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Becoming Imran — Builder, Projects, Proof</title>
+  <meta name="description" content="Becoming Imran is a cinematic one-page profile for Imran Shiundu: builder, software developer, product thinker, and founder-level operator working across web, AI, trading systems, and East African products.">
+  <meta name="theme-color" content="#ded7c7">
+  <meta property="og:title" content="Becoming Imran">
+  <meta property="og:description" content="A professional archive of Imran Shiundu’s work, projects, writing, and builder journey.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/143967151?v=4">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#work">Skip to work</a>
 
-  <div class="cursor-dot"></div>
-  <div class="cursor-outline"></div>
+  <header class="site-nav" aria-label="Primary navigation">
+    <a class="nav-link is-active" href="#home" data-section="home"><span></span>Home</a>
+    <a class="nav-link" href="#work" data-section="work"><span></span>Work</a>
+    <a class="nav-link" href="#proof" data-section="proof"><span></span>Proof</a>
+    <a class="nav-link" href="#about" data-section="about"><span></span>About</a>
+  </header>
 
-  <!-- Loading Screen -->
-  <div class="loading-screen">
-    <div class="loading-spinner">
-      <div class="spinner-ring"></div>
-      <div class="brand-mark">
-        <svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M4 4v16h3V10l9 10h4V4h-3v10L8 4H4z" fill="currentColor"/>
-          <path d="M21 5h-3V2l3 3z" fill="currentColor"/>
-        </svg>
+  <main>
+    <section class="hero section-panel" id="home" aria-label="Becoming Imran home">
+      <div class="hero-kicker">Becoming</div>
+      <h1 class="hero-title" aria-label="Imran">IMRAN</h1>
+
+      <figure class="portrait-card" aria-label="Portrait of Imran">
+        <img src="https://avatars.githubusercontent.com/u/143967151?v=4" alt="Imran Shiundu" loading="eager">
+        <figcaption>
+          <strong>Builder archive</strong>
+          <span>Software · products · systems · writing</span>
+        </figcaption>
+      </figure>
+
+      <div class="hero-meta">
+        <p>Not a celebrity shrine. A working archive for the projects, products, notes, experiments, and proof behind the person becoming Imran.</p>
+        <a href="#work" class="text-cta">Enter the archive</a>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- Mobile Navigation -->
-  <div class="mobile-nav-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
-  <div class="page">
-    <header class="nav">
-      <div class="brand">
-        <svg class="mark" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M4 4v16h3V10l9 10h4V4h-3v10L8 4H4z" fill="currentColor"/>
-          <path d="M21 5h-3V2l3 3z" fill="currentColor"/>
-        </svg>
-        <span class="brand-name">BECOMING&nbsp;IMRAN</span>
+    <section class="section-panel work-intro" id="work" aria-label="Selected work">
+      <div class="section-heading">
+        <p class="small-dot">Selected work</p>
+        <h2>Systems, products, experiments.</h2>
       </div>
-      
-      <div class="nav-menu">
-        <div class="nav-item active" data-scroll="top">Home</div>
-        <div class="nav-item" data-scroll="skills">Skills</div>
-        <div class="nav-item" data-scroll="projects">Projects</div>
-        <div class="nav-item" data-scroll="testimonials">Testimonials</div>
-        <div class="nav-item" data-scroll="stats">Experience</div>
-        <div class="nav-item" data-scroll="contact">Contact</div>
+
+      <div class="work-marquee" aria-hidden="true">
+        <span>BUILDING WITH PROOF</span>
+        <span>DESIGN WITH RESTRAINT</span>
+        <span>CODE THAT CAN BE CHECKED</span>
       </div>
-      
-      <div class="actions">
-        <button id="installBtn" class="btn subtle" hidden>Install App</button>
-        <button id="themeToggle" class="toggle" aria-label="Toggle dark mode">
-          <span class="icon sun" aria-hidden="true">☀</span>
-          <span class="icon moon" aria-hidden="true">☾</span>
-        </button>
+
+      <div class="work-list" aria-label="Project list">
+        <a class="work-row" href="https://github.com/imranshiundu/Griot" data-image="assets/work/griot.svg" target="_blank" rel="noreferrer">
+          <span class="row-dot"></span>
+          <span class="row-title">Griot Trade Bot</span>
+          <span class="row-meta">Trading command desk</span>
+        </a>
+        <a class="work-row" href="https://github.com/imranshiundu/Gravity" data-image="assets/work/gravity.svg" target="_blank" rel="noreferrer">
+          <span class="row-dot"></span>
+          <span class="row-title">Gravity Framework</span>
+          <span class="row-meta">Unified module interface</span>
+        </a>
+        <a class="work-row" href="https://github.com/imranshiundu/Patricia" data-image="assets/work/patricia.svg" target="_blank" rel="noreferrer">
+          <span class="row-dot"></span>
+          <span class="row-title">Patricia Legal AI</span>
+          <span class="row-meta">Legal product system</span>
+        </a>
+        <a class="work-row" href="https://github.com/imranshiundu/Brick4Bits" data-image="assets/work/brick4bits.svg" target="_blank" rel="noreferrer">
+          <span class="row-dot"></span>
+          <span class="row-title">Brick4Bits</span>
+          <span class="row-meta">Asset participation backend</span>
+        </a>
+        <a class="work-row" href="https://github.com/imranshiundu/Hoo-browser" data-image="assets/work/browser.svg" target="_blank" rel="noreferrer">
+          <span class="row-dot"></span>
+          <span class="row-title">Hoo Browser</span>
+          <span class="row-meta">Privacy desktop browser</span>
+        </a>
+        <a class="work-row" href="https://imranisdev.top" data-image="assets/work/book.svg" target="_blank" rel="noreferrer">
+          <span class="row-dot"></span>
+          <span class="row-title">The Book / Notes</span>
+          <span class="row-meta">Writing, memory, direction</span>
+        </a>
       </div>
-    </header>
 
-    <main>
-      <!-- Hero Section -->
-      <section class="hero reveal" id="top">
-        <div class="hero-card glass">
-          <div class="logo-stack">
-            <div class="logo-circle"><span>IS</span></div>
-            <div class="decoration-circle"></div>
-            <div class="decoration-circle"></div>
-          </div>
-          <h1 class="title">Imran.S</h1>
-          <p class="roles">Website Developer · Startup Developer · Software Engineer</p>
-          <p class="quote">"I build websites and apps that help businesses grow. Clean design, smart code, and happy clients."</p>
-          
-          <div class="cta-row">
-            <a class="btn primary" href="#contact">Hire Me Now</a>
-            <a class="btn outline" href="#projects">See My Work</a>
-            <a class="btn subtle" href="assets/Imran_Shiundu_CV.pdf" download>Download CV</a>
-          </div>
-          
-          <div class="hero-stats">
-            <div class="stat">
-              <span class="number">50+</span>
-              <span class="label">Projects</span>
-            </div>
-            <div class="stat">
-              <span class="number">40+</span>
-              <span class="label">Clients</span>
-            </div>
-            <div class="stat">
-              <span class="number">3+</span>
-              <span class="label">Years</span>
-            </div>
-          </div>
-          
-          <div class="qr">
-            <span class="qr-note">Scan QR code from my business card</span>
-            <div class="qr-box">
-              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik00NSA0NWgxMHYxMEg0NXptMTAgMTBoMTB2MTBINTV6bTEwLTIwaDEwdjEwSDY1em0yMCAyMGgxMHYxMEg4NXptLTEwLTEwaDEwdjEwSDc1em0yMCA0MGgxMHYxMEg5NXptMC0yMGgxMHYxMEg5NXptLTMwIDBoMTB2MTBINjV6bTAgMjBoMTB2MTBINjV6bTIwLTIwaDIwdjIwSDEwNXptMCA0MGgxMHYxMGgtMTB6bTIwLTQwaDEwdjExMGgtMTB6bTAgNjBoMTB2MTBoLTEwem0yMC02MGgxMHYxMGgtMTB6bTAgMjBoMTB2MTBoLTEwem0wIDIwaDEwdjEwaC0xMHptMC0xMGgxMHYxMGgtMTB6bS0xMCAxMGgxMHYxMGgtMTB6bS0yMCA0MGgxMHYxMGgtMTB6bTIwIDBoMTB2MTBoLTEwem0tMTAgMTBoMTB2MTBoLTEweiIgZmlsbD0iIzAwMCIvPjwvc3ZnPg==" alt="QR Code" width="140" height="140">
-            </div>
-          </div>
-        </div>
-        
-        <!-- Scroll indicator -->
-        <div class="scroll-indicator">
-          <span>Scroll to explore</span>
-          <div class="mouse">
-            <div class="wheel"></div>
-          </div>
-        </div>
-      </section>
+      <aside class="floating-preview" aria-hidden="true">
+        <img src="assets/work/griot.svg" alt="">
+      </aside>
 
-      <!-- Skills - Control Center Style -->
-      <section class="panel reveal" id="skills">
-        <h2>My Skills & Services</h2>
-        <p class="section-subtitle">I specialize in these technologies and services to help bring your ideas to life:</p>
-        
-        <div class="control-grid">
-          <div class="control-item">
-            <span class="control-icon"><i class="fas fa-laptop-code"></i></span>
-            <span>Web Development</span>
-          </div>
-          <div class="control-item">
-            <span class="control-icon"><i class="fas fa-mobile-alt"></i></span>
-            <span>Mobile Apps</span>
-          </div>
-          <div class="control-item">
-            <span class="control-icon"><i class="fas fa-palette"></i></span>
-            <span>UI/UX Design</span>
-          </div>
-          <div class="control-item">
-            <span class="control-icon"><i class="fas fa-shopping-cart"></i></span>
-            <span>E-commerce</span>
-          </div>
-          <div class="control-item">
-            <span class="control-icon"><i class="fas fa-search"></i></span>
-            <span>SEO Optimization</span>
-          </div>
-          <div class="control-item">
-            <span class="control-icon"><i class="fas fa-chart-bar"></i></span>
-            <span>Data Analysis</span>
-          </div>
-          <div class="control-item">
-            <span class="control-icon"><i class="fas fa-server"></i></span>
-            <span>Backend Development</span>
-          </div>
-          <div class="control-item">
-            <span class="control-icon"><i class="fas fa-database"></i></span>
-            <span>Database Management</span>
-          </div>
-        </div>
-        
-        <div class="skills-detail">
-          <div class="ios-card">
-            <h3>Technical Skills</h3>
-            <div class="skill-bars">
-              <div class="skill">
-                <span class="skill-name">HTML/CSS</span>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-width="95%"></div>
-                </div>
-                <span class="skill-percentage">95%</span>
-              </div>
-              <div class="skill">
-                <span class="skill-name">JavaScript</span>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-width="90%"></div>
-                </div>
-                <span class="skill-percentage">90%</span>
-              </div>
-              <div class="skill">
-                <span class="skill-name">React</span>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-width="85%"></div>
-                </div>
-                <span class="skill-percentage">85%</span>
-              </div>
-              <div class="skill">
-                <span class="skill-name">PHP</span>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-width="80%"></div>
-                </div>
-                <span class="skill-percentage">80%</span>
-              </div>
-              <div class="skill">
-                <span class="skill-name">Java</span>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-width="75%"></div>
-                </div>
-                <span class="skill-percentage">75%</span>
-              </div>
-              
-            </div>
-          </div>
-          
-          <div class="ios-card">
-            <h3>Services Offered</h3>
-            <div class="service-list">
-              <div class="service-item">
-                <i class="fas fa-globe"></i>
-                <div>
-                  <h4>Website Development</h4>
-                  <p>Custom websites tailored to your business needs</p>
-                </div>
-              </div>
-              <div class="service-item">
-                <i class="fas fa-shopping-cart"></i>
-                <div>
-                  <h4>E-commerce Solutions</h4>
-                  <p>Online stores with payment integration</p>
-                </div>
-              </div>
-              <div class="service-item">
-                <i class="fas fa-mobile-alt"></i>
-                <div>
-                  <h4>Mobile Applications</h4>
-                  <p>Cross-platform mobile apps</p>
-                </div>
-              </div>
-              <div class="service-item">
-                <i class="fas fa-paint-brush"></i>
-                <div>
-                  <h4>UI/UX Design</h4>
-                  <p>User-friendly and attractive interfaces</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects Section -->
-      <section class="panel reveal" id="projects">
-        <h2>Featured Projects</h2>
-        <p class="section-subtitle">Here are some of my recent projects that I've built for clients:</p>
-        
-        <div class="project-filters">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="web">Web Development</button>
-          <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
-          <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
-        </div>
-        
-        <div class="project-grid">
-          <div class="project-card" data-category="web ecommerce">
-            <div class="project-img">
-              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMzAwIDIwMCI+PHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmNWY1ZjUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmaWxsPSIjMzMzIj5FbGVnYW50IEUtY29tbWVyY2UgU3RvcmU8L3RleHQ+PC9zdmc+" alt="E-commerce Website">
-              <div class="project-overlay">
-                <button class="project-preview"><i class="fas fa-eye"></i> Preview</button>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Online Store</h3>
-              <p class="project-desc">A full online shopping website with payment system and admin panel.</p>
-              <div class="project-tags">
-                <span class="project-tag">HTML</span>
-                <span class="project-tag">CSS</span>
-                <span class="project-tag">PHP</span>
-                <span class="project-tag">MySQL</span>
-              </div>
-              <div class="project-actions">
-                <a href="#" class="btn outline">View Project</a>
-                <a href="#" class="btn icon-btn"><i class="fas fa-external-link-alt"></i></a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="project-card" data-category="web">
-            <div class="project-img">
-              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMzAwIDIwMCI+PHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNlM2Y0ZmYiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmaWxsPSIjMzMzIj5Nb2Rlcm4gQ29ycG9yYXRlIFdlYnNpdGU8L3RleHQ+PC9zdmc+" alt="Business Portfolio">
-              <div class="project-overlay">
-                <button class="project-preview"><i class="fas fa-eye"></i> Preview</button>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Company Website</h3>
-              <p class="project-desc">A modern website for a business to showcase their services and products.</p>
-              <div class="project-tags">
-                <span class="project-tag">HTML</span>
-                <span class="project-tag">CSS</span>
-                <span class="project-tag">JavaScript</span>
-              </div>
-              <div class="project-actions">
-                <a href="#" class="btn outline">View Project</a>
-                <a href="#" class="btn icon-btn"><i class="fas fa-external-link-alt"></i></a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="project-card" data-category="mobile">
-            <div class="project-img">
-              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMzAwIDIwMCI+PHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmZmYyZWMiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmaWxsPSIjMzMzIj5UYXNrIE1hbmFnZW1lbnQgQXBwPC90ZXh0Pjwvc3ZnPg==" alt="Mobile App">
-              <div class="project-overlay">
-                <button class="project-preview"><i class="fas fa-eye"></i> Preview</button>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Task Manager App</h3>
-              <p class="project-desc">An application to help users organize their daily tasks and reminders.</p>
-              <div class="project-tags">
-                <span class="project-tag">React</span>
-                <span class="project-tag">JavaScript</span>
-                <span class="project-tag">CSS</span>
-              </div>
-              <div class="project-actions">
-                <a href="#" class="btn outline">View Project</a>
-                <a href="#" class="btn icon-btn"><i class="fas fa-external-link-alt"></i></a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="project-card" data-category="web ecommerce">
-            <div class="project-img">
-              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMzAwIDIwMCI+PHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmNWY1ZjUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmaWxsPSIjMzMzIj5SZXN0YXVyYW50IEJvb2tpbmc8L3RleHQ+PC9zdmc+" alt="Restaurant Booking">
-              <div class="project-overlay">
-                <button class="project-preview"><i class="fas fa-eye"></i> Preview</button>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Restaurant Booking System</h3>
-              <p class="project-desc">Online reservation system for restaurants with table management.</p>
-              <div class="project-tags">
-                <span class="project-tag">HTML</span>
-                <span class="project-tag">CSS</span>
-                <span class="project-tag">JavaScript</span>
-                <span class="project-tag">PHP</span>
-              </div>
-              <div class="project-actions">
-                <a href="#" class="btn outline">View Project</a>
-                <a href="#" class="btn icon-btn"><i class="fas fa-external-link-alt"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="view-more">
-          <a href="#" class="btn outline">View All Projects</a>
-        </div>
-      </section>
-
-      <!-- Testimonials Section -->
-      <section class="panel reveal" id="testimonials">
-        <h2>Client Testimonials</h2>
-        <p class="section-subtitle">What my clients say about working with me:</p>
-        
-        <div class="testimonials-container">
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              <div class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <p class="testimonial-text">"Imran delivered an exceptional e-commerce website for our business. His attention to detail and communication throughout the project were outstanding."</p>
-            </div>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIzMCIgZmlsbD0iI2U0ZTRlNCIvPjxjaXJjbGUgY3g9IjMwIiBjeT0iMjQiIHI9IjgiIGZpbGw9IiNhOGE4YTgiLz48cGF0aCBkPSJNMzAgMzhjLTYgMC04IDQtOCA0aDE2czItNC04LTR6IiBmaWxsPSIjYThhOGE4Ii8+PC9zdmc+" alt="Sarah Johnson">
-              </div>
-              <div class="author-details">
-                <h4>Sarah Johnson</h4>
-                <p>CEO, Fashion Store</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              <div class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <p class="testimonial-text">"The mobile app Imran developed for our startup exceeded our expectations. He was responsive to feedback and delivered ahead of schedule."</p>
-            </div>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIzMCIgZmlsbD0iI2U0ZTRlNCIvPjxjaXJjbGUgY3g9IjMwIiBjeT0iMjQiIHI9IjgiIGZpbGw9IiNhOGE4YTgiLz48cGF0aCBkPSJNMzAgMzhjLTYgMC04IDQtOCA0aDE2czItNC04LTR6IiBmaWxsPSIjYThhOGE4Ii8+PC9zdmc+" alt="Michael Chen">
-              </div>
-              <div class="author-details">
-                <h4>Michael Chen</h4>
-                <p>Founder, TechStart</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              <div class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-              </div>
-              <p class="testimonial-text">"Imran transformed our outdated website into a modern, responsive platform that has significantly increased our online engagement and sales."</p>
-            </div>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIzMCIgZmlsbD0iI2U0ZTRlNCIvPjxjaXJjbGUgY3g9IjMwIiBjeT0iMjQiIHI9IjgiIGZpbGwPSIjYThhOGE4Ii8+PHBhdGggZD0iTTMwIDM4Yy02IDAtOCA0LTggNGgxNnMyLTQtOC00eiIgZmlsbD0iI2E4YThhOCIvPjwvc3ZnPg==" alt="Emily Rodriguez">
-              </div>
-              <div class="author-details">
-                <h4>Emily Rodriguez</h4>
-                <p>Marketing Director, RetailCo</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="clients-section">
-          <h3>Trusted By</h3>
-          <div class="clients-grid">
-            <div class="client-logo">
-              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCAxMjAgNjAiPjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iNjAiIGZpbGw9IiNmNWY1ZjUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmaWxsPSIjMzMzIj5DbGllbnQgTG9nbzwvdGV4dD48L3N2Zz4=" alt="Client 1">
-            </div>
-            <div class="client-logo">
-              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCAxMjAgNjAiPjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iNjAiIGZpbGw9IiNmNWY1ZjUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmaWxsPSIjMzMzIj5DbGllbnQgTG9nbzwvdGV4dD48L3N2Zz4=" alt="Client 2">
-            </div>
-            <div class="client-logo">
-              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCAxMjAgNjAiPjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iNjAiIGZpbGw9IiNmNWY1ZjUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmaWxsPSIjMzMzIj5DbGllbnQgTG9nbzwvdGV4dD48L3N2Zz4=" alt="Client 3">
-            </div>
-            <div class="client-logo">
-              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCAxMjAgNjAiPjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iNjAiIGZpbGw9IiNmNWY1ZjUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmaWxsPSIjMzMzIj5DbGllbnQgTG9nbzwvdGV4dD48L3N2Zz4=" alt="Client 4">
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Stats Section -->
-      <section class="panel reveal" id="stats">
-        <h2>My Experience</h2>
-        <p class="section-subtitle">Numbers that show my experience and what I can deliver:</p>
-        
-        <div class="stats-grid">
-          <div class="stat-item">
-            <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
-            <div class="stat-value" data-count="50">0</div>
-            <div class="stat-label">Projects Done</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
-            <div class="stat-value" data-count="3">0</div>
-            <div class="stat-label">Years Experience</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-icon"><i class="fas fa-user-check"></i></div>
-            <div class="stat-value" data-count="40">0</div>
-            <div class="stat-label">Happy Clients</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-icon"><i class="fas fa-award"></i></div>
-            <div class="stat-value" data-count="100">0</div>
-            <div class="stat-label">Satisfaction</div>
-          </div>
-        </div>
-        
-        <div class="timeline-section">
-          <h3>Work Experience</h3>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-date">2022 - Present</div>
-              <div class="timeline-content">
-                <h4>Senior Web Developer</h4>
-                <p>Tech Solutions Inc.</p>
-                <p>Leading development of complex web applications and mentoring junior developers.</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-date">2020 - 2022</div>
-              <div class="timeline-content">
-                <h4>Frontend Developer</h4>
-                <p>Digital Creations Agency</p>
-                <p>Developed responsive websites and implemented UI/UX designs for various clients.</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-date">2019 - 2020</div>
-              <div class="timeline-content">
-                <h4>Junior Developer</h4>
-                <p>StartUp Ventures</p>
-                <p>Assisted in developing web applications and maintaining existing codebase.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="ios-card">
-          <h3>My Approach</h3>
-          <p>I focus on understanding what my clients need and delivering solutions that work for their business. I believe in clean code, good design, and making websites that are easy to use.</p>
-          <p>I work closely with clients to make sure they are happy with the final product.</p>
-        </div>
-      </section>
-
-      <!-- Links Section -->
-      <section class="panel reveal" id="links">
-        <h2>My Online Profiles</h2>
-        <p class="section-subtitle">Connect with me on these platforms:</p>
-        
-        <div class="link-grid">
-          <a class="link-tile" href="https://example.com" target="_blank" rel="noopener">
-            <span class="icon"><i class="fas fa-globe"></i></span>
-            <span>Portfolio Website</span>
-          </a>
-          <a class="link-tile" href="https://linkedin.com/in/your-handle" target="_blank" rel="noopener">
-            <span class="icon"><i class="fab fa-linkedin"></i></span>
-            <span>LinkedIn</span>
-          </a>
-          <a class="link-tile" href="https://github.com/your-handle" target="_blank" rel="noopener">
-            <span class="icon"><i class="fab fa-github"></i></span>
-            <span>GitHub</span>
-          </a>
-          <a class="link-tile" href="https://x.com/your-handle" target="_blank" rel="noopener">
-            <span class="icon"><i class="fab fa-twitter"></i></span>
-            <span>X (Twitter)</span>
-          </a>
-          <a class="link-tile" href="https://instagram.com/your-handle" target="_blank" rel="noopener">
-            <span class="icon"><i class="fab fa-instagram"></i></span>
-            <span>Instagram</span>
-          </a>
-          <a class="link-tile" href="https://dribbble.com/your-handle" target="_blank" rel="noopener">
-            <span class="icon"><i class="fab fa-dribbble"></i></span>
-            <span>Dribbble</span>
-          </a>
-          <a class="link-tile" href="https://behance.net/your-handle" target="_blank" rel="noopener">
-            <span class="icon"><i class="fab fa-behance"></i></span>
-            <span>Behance</span>
-          </a>
-          <a class="link-tile" href="https://medium.com/@your-handle" target="_blank" rel="noopener">
-            <span class="icon"><i class="fab fa-medium"></i></span>
-            <span>Medium</span>
-          </a>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section class="panel reveal" id="contact">
-        <h2>Let's Work Together</h2>
-        <p class="section-subtitle">Reach out to discuss your project or idea:</p>
-        
-        <div class="contact-container">
-          <div class="contact-info">
-            <h3>Get in touch</h3>
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <div>
-                <h4>Email</h4>
-                <p>imranshiundu@gmail.com</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <div>
-                <h4>Phone</h4>
-                <p>+254 740 293 859</p>
-                <p>+254 706 858 992</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <div>
-                <h4>Location</h4>
-                <p>Nairobi, Kenya</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-clock"></i>
-              <div>
-                <h4>Working Hours</h4>
-                <p>Mon - Fri: 9AM - 6PM</p>
-                <p>Sat: 10AM - 2PM</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="contact-form-container">
-            <h3>Send a message</h3>
-            <form class="contact-form" id="projectInquiryForm">
-              <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone">
-              </div>
-              <div class="form-group">
-                <label for="projectType">Project Type</label>
-                <select id="projectType" name="projectType">
-                  <option value="">Select project type</option>
-                  <option value="website">Website Development</option>
-                  <option value="ecommerce">E-commerce Store</option>
-                  <option value="mobile">Mobile Application</option>
-                  <option value="design">UI/UX Design</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="budget">Project Budget (USD)</label>
-                <select id="budget" name="budget">
-                  <option value="">Select budget range</option>
-                  <option value="500-1000">$500 - $1,000</option>
-                  <option value="1000-2500">$1,000 - $2,500</option>
-                  <option value="2500-5000">$2,500 - $5,000</option>
-                  <option value="5000+">$5,000+</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="message">Project Details</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-              </div>
-              <button type="submit" class="btn primary">Send Message</button>
-            </form>
-          </div>
-        </div>
-        
-        <div class="contact-grid">
-          <a class="btn wide" href="https://wa.me/254740293859?text=Hi%20Imran%2C%20I%27d%20like%20to%20hire%20you" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp"></i> WhatsApp (+254 740 293 859)
-          </a>
-          <a class="btn wide" href="https://wa.me/254706858992?text=Hi%20Imran%2C%20I%27d%20like%20to%20hire%20you" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp"></i> WhatsApp (+254 706 858 992)
-          </a>
-          <a class="btn wide outline" href="mailto:imranshiundu@gmail.com?subject=Project%20Inquiry%20from%20Your%20Website">
-            <i class="fas fa-envelope"></i> Send Me an Email
-          </a>
-        </div>
-        
-        <div class="ios-card">
-          <h3>What happens next?</h3>
-          <ol>
-            <li>You contact me with your project details</li>
-            <li>We discuss your needs and timeline</li>
-            <li>I prepare a proposal and quote</li>
-            <li>We start working on your project</li>
-          </ol>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <svg class="mark" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M4 4v16h3V10l9 10h4V4h-3v10L8 4H4z" fill="currentColor"/>
-            <path d="M21 5h-3V2l3 3z" fill="currentColor"/>
-          </svg>
-          <span class="brand-name">BECOMING IMRAN</span>
-          <p>Creating digital experiences that help businesses grow.</p>
-        </div>
-        
-        <div class="footer-links">
-          <div class="footer-column">
-            <h4>Navigation</h4>
-            <a href="#top">Home</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#stats">Experience</a>
-            <a href="#contact">Contact</a>
-          </div>
-          
-          <div class="footer-column">
-            <h4>Services</h4>
-            <a href="#skills">Web Development</a>
-            <a href="#skills">Mobile Apps</a>
-            <a href="#skills">UI/UX Design</a>
-            <a href="#skills">E-commerce</a>
-          </div>
-          
-          <div class="footer-column">
-            <h4>Connect</h4>
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-            <a href="https://github.com" target="_blank">GitHub</a>
-            <a href="https://twitter.com" target="_blank">Twitter</a>
-            <a href="https://instagram.com" target="_blank">Instagram</a>
-          </div>
-        </div>
+      <div class="cover-strip" aria-label="Visual work covers">
+        <figure><img src="assets/work/griot.svg" alt="Griot Trade Bot cover"><figcaption>Griot</figcaption></figure>
+        <figure><img src="assets/work/gravity.svg" alt="Gravity Framework cover"><figcaption>Gravity</figcaption></figure>
+        <figure><img src="assets/work/patricia.svg" alt="Patricia Legal AI cover"><figcaption>Patricia</figcaption></figure>
+        <figure><img src="assets/work/brick4bits.svg" alt="Brick4Bits cover"><figcaption>Brick4Bits</figcaption></figure>
       </div>
-      
-      <div class="footer-bottom">
-        <span>© 2025 Imran Shiundu. All rights reserved.</span>
-        <div class="footer-legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
+    </section>
+
+    <section class="section-panel proof-section" id="proof" aria-label="Proof and public archive">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="small-dot">Proof</p>
+          <h2>No empty legend. Receipts only.</h2>
         </div>
-        <a href="#top" class="top-link">Back to top <i class="fas fa-arrow-up"></i></a>
+        <p class="heading-copy">This section replaces celebrity-style press with a cleaner public record: shipped code, hard lessons, product thinking, and the work still in progress.</p>
       </div>
-    </footer>
-  </div>
 
-  <!-- Floating Action Button -->
-  <a href="#contact" class="fab">
-    <i class="fas fa-comment"></i>
-  </a>
+      <div class="proof-grid">
+        <article class="proof-card">
+          <span>01</span>
+          <h3>Builder logs</h3>
+          <p>Short, honest updates from the process: what shipped, what broke, what still needs verification.</p>
+        </article>
+        <article class="proof-card">
+          <span>02</span>
+          <h3>Project archive</h3>
+          <p>A curated index of serious systems: trading, legal AI, travel, property, browsers, and backend platforms.</p>
+        </article>
+        <article class="proof-card">
+          <span>03</span>
+          <h3>Writing</h3>
+          <p>Notes, book fragments, operating principles, and the thinking behind the work.</p>
+        </article>
+        <article class="proof-card">
+          <span>04</span>
+          <h3>Contact</h3>
+          <p>A direct line for serious collaborations, product builds, technical reviews, and long-term work.</p>
+        </article>
+      </div>
 
-  <!-- Project Modal -->
-  <div class="modal" id="projectModal">
-    <div class="modal-content">
-      <span class="modal-close">&times;</span>
-      <div class="modal-body">
-        <img src="" alt="Project Image" class="modal-image">
-        <div class="modal-details">
-          <h2 class="modal-title"></h2>
-          <p class="modal-description"></p>
-          <div class="modal-tags"></div>
-          <a href="#" class="btn primary modal-link">View Live Project</a>
+      <div class="statement-card">
+        <p>“Becoming Imran” should feel like a public museum for a builder in motion: bold enough to be memorable, restrained enough to stay credible.</p>
+      </div>
+    </section>
+
+    <section class="section-panel about-section" id="about" aria-label="About Imran">
+      <h2 class="about-title">BECOMING IMRAN</h2>
+
+      <div class="about-columns">
+        <p>Imran Shiundu is a software builder focused on turning raw ideas into structured products. The work sits between design, engineering, strategy, and operations: websites, backend systems, AI tools, automation, dashboards, and product infrastructure.</p>
+        <p>The point of this site is not to pretend the story is already complete. It is to make the journey visible: what is being built, why it matters, what has been tested, and what still needs proof.</p>
+        <p>The standard is simple: professional presentation, real work, clear thinking, and no fake achievements. If something is not proven yet, it stays in progress. If it works, it earns its place in the archive.</p>
+      </div>
+
+      <form class="contact-strip" action="mailto:hello@imranisdev.top" method="post" enctype="text/plain">
+        <label for="email">For projects, collaborations, or serious conversations.</label>
+        <div>
+          <input id="email" type="email" name="email" placeholder="Email Address" autocomplete="email" required>
+          <button type="submit">Submit</button>
         </div>
-      </div>
-    </div>
-  </div>
+      </form>
+    </section>
+  </main>
 
-  <!-- Notification Toast -->
-  <div class="toast" id="notificationToast">
-    <div class="toast-content">
-      <i class="fas fa-check-circle toast-icon"></i>
-      <div class="toast-message"></div>
-    </div>
-  </div>
+  <footer class="site-footer">
+    <span>Copyright © 2026 Becoming Imran.</span>
+    <a href="https://imranisdev.top" target="_blank" rel="noreferrer">imranisdev.top</a>
+    <span>All Rights Reserved.</span>
+  </footer>
 
-  <script src="app.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
